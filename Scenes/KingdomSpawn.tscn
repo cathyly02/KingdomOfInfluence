@@ -1,15 +1,15 @@
 [gd_scene load_steps=14 format=3 uid="uid://c3njpqy2qcci7"]
 
 [ext_resource type="Texture2D" uid="uid://y3oos8g7jth" path="res://assests/material/tiles/checkerboard.png" id="1_cj8rm"]
-[ext_resource type="Script" uid="uid://bodrkyghy7b8k" path="res://Scenes/kingdom_spawn.gd" id="1_jtqqd"]
-[ext_resource type="Script" uid="uid://dyadfgx22fcby" path="res://Scenes/player.gd" id="3_vmdq1"]
-[ext_resource type="PackedScene" uid="uid://bdn3enrs1eqj1" path="res://tree_pine_tall_a_2.tscn" id="4_ksjgd"]
+[ext_resource type="Script" uid="uid://bodrkyghy7b8k" path="res://Scripts/kingdom_spawn.gd" id="1_jtqqd"]
+[ext_resource type="Script" uid="uid://dyadfgx22fcby" path="res://Scripts/player.gd" id="3_vmdq1"]
+[ext_resource type="PackedScene" uid="uid://bdn3enrs1eqj1" path="res://Scenes/Instances/tree_pine_tall_a_2.tscn" id="4_ksjgd"]
 [ext_resource type="PackedScene" uid="uid://cyh5ty15w04nk" path="res://Scenes/Instances/character.tscn" id="5_ee6bs"]
 [ext_resource type="Texture2D" uid="uid://b8i0urtuieicu" path="res://assests/Skins/criminalMaleA.png" id="6_r6alr"]
 [ext_resource type="Texture2D" uid="uid://d4ln8y5hopefd" path="res://assests/Skins/cyborgFemaleA.png" id="7_tq6qv"]
 [ext_resource type="Texture2D" uid="uid://cy5svfmcueksu" path="res://assests/Skins/skaterFemaleA.png" id="8_8iruv"]
 [ext_resource type="Texture2D" uid="uid://delalcivwnxwb" path="res://assests/Skins/skaterMaleA.png" id="9_f2052"]
-[ext_resource type="Script" uid="uid://cre2glqfb6rar" path="res://Scenes/CameraMovement.gd" id="10_r6alr"]
+[ext_resource type="Script" uid="uid://cre2glqfb6rar" path="res://Scripts/CameraMovement.gd" id="10_r6alr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jtqqd"]
 depth_draw_mode = 2
