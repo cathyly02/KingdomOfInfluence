@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=14 format=3 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_go701"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://36i8sv75qmgh" path="res://assests/nature/instances/tree_pineDefaultA.glb" id="9_7yui6"]
 [ext_resource type="PackedScene" uid="uid://cxvjeapfatiax" path="res://assests/nature/instances/log_stack.glb" id="10_7yui6"]
 [ext_resource type="PackedScene" uid="uid://8fpuflq6tjdh" path="res://assests/nature/instances/campfire_logs.glb" id="10_ikia7"]
+[ext_resource type="AudioStream" uid="uid://iw57otolqehs" path="res://assests/sound/lofi.mp3" id="12_7yui6"]
 
 [sub_resource type="Environment" id="Environment_go701"]
 background_mode = 1
@@ -147,5 +148,10 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.4558, 1, 4.30618)
 
 [node name="campfire_logs2" parent="Map" instance=ExtResource("10_ikia7")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.659729, 1, 4.58887)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_7yui6")
+autoplay = true
+parameters/looping = true
 
 [editable path="PlayerMovement"]

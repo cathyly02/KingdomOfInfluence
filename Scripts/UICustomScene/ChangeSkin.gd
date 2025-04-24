@@ -17,10 +17,12 @@ var third_slider_value = 0.0
 var fourth_slider_value = 0.0
 
 # finds mech on player
-@onready var mesh = $Skeleton3D/characterMedium
+@onready var mesh = $GeneralSkeleton/characterMedium
 
 # creates skinn aray - function starts on ready 
 func _ready():
+	#play idle animation
+	$AnimationPlayer.play("playerAnimPack/idle")
 	# Apply the default skin (optional)
 	if skins.size() > 0:
 		change_skin(1)

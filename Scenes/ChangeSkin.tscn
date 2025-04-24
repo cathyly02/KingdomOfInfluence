@@ -1,13 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://bgj1yjdo56hv2"]
+[gd_scene load_steps=11 format=3 uid="uid://bgj1yjdo56hv2"]
 
 [ext_resource type="PackedScene" uid="uid://cyh5ty15w04nk" path="res://Scenes/Instances/character.tscn" id="1_obnvj"]
-[ext_resource type="Texture2D" uid="uid://b8i0urtuieicu" path="res://assests/Skins/criminalMaleA.png" id="2_01lhc"]
 [ext_resource type="Script" uid="uid://b7h8kdk1r7tp6" path="res://Scripts/UICustomScene/ChangeSkin.gd" id="2_abk0b"]
 [ext_resource type="Script" uid="uid://kfg4d78ewmth" path="res://Scripts/UICustomScene/NextButton/ToPersonalityUI.gd" id="3_2ms1e"]
-[ext_resource type="Texture2D" uid="uid://d4ln8y5hopefd" path="res://assests/Skins/cyborgFemaleA.png" id="3_vc36h"]
 [ext_resource type="Script" uid="uid://bbj2xqkl6cra3" path="res://Scripts/UICustomScene/NextButton/ToKingdomScene.gd" id="4_abk0b"]
-[ext_resource type="Texture2D" uid="uid://cy5svfmcueksu" path="res://assests/Skins/skaterFemaleA.png" id="4_c6ofp"]
-[ext_resource type="Texture2D" uid="uid://delalcivwnxwb" path="res://assests/Skins/skaterMaleA.png" id="5_if7nu"]
 [ext_resource type="Script" uid="uid://cn0g7uoh6ge43" path="res://Scenes/backCharCustom.gd" id="7_01lhc"]
 [ext_resource type="Script" uid="uid://v40kjlqp5w46" path="res://Scripts/SliderScripts/firstslider.gd" id="9_c6ofp"]
 [ext_resource type="Script" uid="uid://dysqcdidixwm6" path="res://Scripts/SliderScripts/secondslider.gd" id="10_if7nu"]
@@ -26,9 +22,8 @@ func _ready():
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="Player" parent="Node3D" instance=ExtResource("1_obnvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.008, 0.017)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1, 0.008, 0.017)
 script = ExtResource("2_abk0b")
-skins = Array[Texture2D]([ExtResource("2_01lhc"), ExtResource("3_vc36h"), ExtResource("4_c6ofp"), ExtResource("5_if7nu")])
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Node3D"]
 
