@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d331lby2rtimb"
+path="res://.godot/imported/structure-fence-sides.obj-70461f2778ea9eff241506ca01c84b0c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/structure-fence-sides.obj-70461f2778ea9eff241506ca01c84b0c.mesh"]
+
+source_file="res://Models/OBJ format/structure-fence-sides.obj"
+dest_files=["res://.godot/imported/structure-fence-sides.obj-70461f2778ea9eff241506ca01c84b0c.mesh", "res://.godot/imported/structure-fence-sides.obj-70461f2778ea9eff241506ca01c84b0c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
