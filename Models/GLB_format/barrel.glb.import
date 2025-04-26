@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c18j5ey7q4sx"
+uid="uid://rji5av6txomv"
 path="res://.godot/imported/barrel.glb-d184ce128054d8dd12e18a78c424f007.scn"
 
 [deps]
@@ -33,5 +33,5 @@ animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={}
-gltf/naming_version=1
+gltf/naming_version=0
 gltf/embedded_image_handling=1
