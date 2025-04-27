@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=26 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -13,15 +13,9 @@
 [ext_resource type="Script" uid="uid://cbktu5ak0u57n" path="res://Scripts/MainGame/guitar.gd" id="13_c5t2i"]
 [ext_resource type="PackedScene" uid="uid://rji5av6txomv" path="res://Models/GLB_format/barrel.glb" id="14_e0ngr"]
 [ext_resource type="Script" uid="uid://duws8d8qy22nr" path="res://Scenes/pick.gd" id="14_hgpy0"]
-[ext_resource type="AudioStream" uid="uid://dus6hfcbnxpht" path="res://assests/sound/chords/AmDown.mp3" id="14_pyn1s"]
 [ext_resource type="AudioStream" uid="uid://iw57otolqehs" path="res://assests/sound/lofi.mp3" id="15_7yui6"]
 [ext_resource type="PackedScene" uid="uid://c8qe846sih8f" path="res://assests/nature/instances/flower_redC.glb" id="15_hgpy0"]
-[ext_resource type="AudioStream" uid="uid://banv8i863fw0k" path="res://assests/sound/chords/AmUp.mp3" id="15_no8kt"]
 [ext_resource type="PackedScene" uid="uid://kjcr3mqood7g" path="res://assests/nature/instances/mushroom_red.glb" id="16_t2t4p"]
-[ext_resource type="AudioStream" uid="uid://jglk4ophgs0n" path="res://assests/sound/chords/CDown.mp3" id="16_xbk3s"]
-[ext_resource type="AudioStream" uid="uid://df3klhv1b5ssl" path="res://assests/sound/chords/CUp.mp3" id="17_i4fjy"]
-[ext_resource type="AudioStream" uid="uid://xe8coiydk4l0" path="res://assests/sound/chords/GDown.mp3" id="18_pt3ps"]
-[ext_resource type="AudioStream" uid="uid://bu0m7depg202l" path="res://assests/sound/chords/GUp.mp3" id="19_hmc15"]
 
 [sub_resource type="Environment" id="Environment_go701"]
 background_mode = 1
@@ -1586,9 +1580,6 @@ parameters/looping = true
 
 [node name="Guitar" type="Node3D" parent="."]
 script = ExtResource("13_c5t2i")
-Am = Array[AudioStream]([ExtResource("14_pyn1s"), ExtResource("15_no8kt")])
-C = Array[AudioStream]([ExtResource("16_xbk3s"), ExtResource("17_i4fjy")])
-G = Array[AudioStream]([ExtResource("18_pt3ps"), ExtResource("19_hmc15")])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Guitar"]
 
