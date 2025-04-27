@@ -1,12 +1,14 @@
-[gd_scene load_steps=19 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=21 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://cl8f4l3gcog6l" path="res://assests/nature/instances/tent_detailedClosed.glb" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://ewc47bsrxwmq" path="res://assests/nature/instances/tent_detailedOpen.glb" id="4_fo5ed"]
-[ext_resource type="PackedScene" uid="uid://budpoagrxxpnv" path="res://assests/nature/ForestPack.tscn/fourTreeCluster.tscn" id="8_ikia7"]
+[ext_resource type="PackedScene" uid="uid://ddcugicxle0pt" path="res://assests/nature/ForestPack.tscn/all_tree_forest.tscn" id="8_7yui6"]
 [ext_resource type="PackedScene" uid="uid://d1naoshio10uw" path="res://assests/nature/instances/campfire_stones.glb" id="9_0fj1v"]
+[ext_resource type="PackedScene" uid="uid://cdqsnehepsljo" path="res://assests/nature/GrassClusters/all_grass.tscn" id="9_7yui6"]
 [ext_resource type="PackedScene" uid="uid://cxvjeapfatiax" path="res://assests/nature/instances/log_stack.glb" id="10_7yui6"]
+[ext_resource type="PackedScene" uid="uid://dfrpvmttprmjq" path="res://assests/nature/farm/corn_plot.tscn" id="10_c5t2i"]
 [ext_resource type="PackedScene" uid="uid://8fpuflq6tjdh" path="res://assests/nature/instances/campfire_logs.glb" id="10_ikia7"]
 [ext_resource type="PackedScene" uid="uid://rji5av6txomv" path="res://Models/GLB_format/barrel.glb" id="14_e0ngr"]
 [ext_resource type="AudioStream" uid="uid://iw57otolqehs" path="res://assests/sound/lofi.mp3" id="15_7yui6"]
@@ -255,79 +257,18 @@ shape = SubResource("CylinderShape3D_t2t4p")
 
 [node name="forestTrees" type="Node3D" parent="Map"]
 
-[node name="trees23" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.810883, -0.000180539, -0.585209, -0.000197782, 1, -3.44359e-05, 0.585209, 8.78023e-05, -0.810883, 11.9428, -1.29709, 23.3791)
-
-[node name="trees23" parent="Map/forestTrees/trees23" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.810883, -0.000180539, -0.585209, -0.000197782, 1, -3.44358e-05, 0.585209, 8.78023e-05, -0.810883, 9.86515, -0.954971, -25.961)
-
-[node name="trees11" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.307504, -5.832e-05, -0.951547, -8.63605e-05, 1, -8.91866e-05, 0.951547, 0.000109595, 0.307504, -19.5704, -2.21812, 35.3345)
-
-[node name="trees12" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.998993, -5.832e-05, -0.0448596, 5.33337e-05, 1, -0.000112107, 0.0448595, 0.000109595, 0.998993, -32.7317, -0.211056, 25.661)
-
-[node name="trees13" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.810883, -0.000180539, -0.585209, -0.000197782, 1, -3.44359e-05, 0.585209, 8.78023e-05, -0.810883, -30.0298, -0.636795, 15.7344)
-
-[node name="trees14" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.264508, -0.000180539, -0.964383, -3.69407e-05, 1, -0.000197329, 0.964383, 8.78023e-05, 0.264508, -32.6341, -0.348359, 3.54308)
-
-[node name="trees15" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.676569, -0.000124104, -0.736379, -8.63605e-05, 1, -8.91866e-05, 0.736379, 3.24074e-06, -0.676569, 26.9046, -1.21521, 10.9314)
-
-[node name="trees16" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.453117, -0.000124104, -0.891451, 5.33337e-05, 1, -0.000112107, 0.891451, 3.24074e-06, 0.453117, 24.6807, -1.31208, -2.93549)
-
-[node name="trees17" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.908747, -0.000165351, 0.417348, -0.000197782, 1, -3.44359e-05, -0.417348, -0.000113854, -0.908747, 35.6172, -0.291239, -9.71729)
-
-[node name="trees18" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.708922, -0.000165351, -0.705287, -3.69407e-05, 1, -0.000197329, 0.705287, -0.000113854, -0.708922, 48.1285, -2.20522, -16.0976)
-
-[node name="trees19" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.895151, -3.75378e-05, 0.445763, -8.63605e-05, 1, -8.91866e-05, -0.445763, -0.000118336, -0.895151, 10.0698, -2.16235, -31.983)
-
-[node name="trees20" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.730784, -3.75379e-05, -0.682609, 5.33337e-05, 1, -0.000112107, 0.682609, -0.000118336, -0.730784, 22.7757, -2.8369, -37.9661)
-
-[node name="trees21" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.148901, 6.35209e-05, 0.988852, -0.000197782, 1, -3.44359e-05, -0.988852, -0.000190443, 0.148901, 32.325, -2.63327, -29.3399)
-
-[node name="trees22" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.874253, 6.35209e-05, 0.48547, -3.69407e-05, 1, -0.000197329, -0.48547, -0.000190443, -0.874253, 42.286, -1.23001, -18.7559)
-
-[node name="trees" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.115624, 0)
-
-[node name="trees2" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.362692, -0.0108653, 0.931846, 0.0151935, 0.99973, 0.0175705, -0.931785, 0.0205307, -0.362429, -5.26328, -0.283056, 1.07371)
-
-[node name="trees3" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.870063, 0, -0.49294, 0, 1, 0, 0.49294, 0, -0.870063, -8.31527, -1.09003, -38.7272)
-
-[node name="trees4" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0983, -2.22638, -30.837)
-
-[node name="trees5" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.393252, 0, 0.919431, 0, 1, 0, -0.919431, 0, -0.393252, -15.9874, -0.223751, -6.5608)
-
-[node name="trees6" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(-0.46512, 0, -0.885248, 0, 1, 0, 0.885248, 0, -0.46512, -16.1322, -0.180757, -28.9127)
-
-[node name="trees7" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.57912, -1.1006, 32.3517)
-
-[node name="trees8" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.34988, 0, 0.936794, 0, 1, 0, -0.936794, 0, 0.34988, 0.872511, -2.20121, 43.3713)
-
-[node name="trees9" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.307504, -5.832e-05, -0.951547, -8.63605e-05, 1, -8.91867e-05, 0.951547, 0.000109595, 0.307504, -11.5208, -1.99895, 39.9063)
-
-[node name="trees10" parent="Map/forestTrees" instance=ExtResource("8_ikia7")]
-transform = Transform3D(0.998993, -5.832e-05, -0.0448596, 5.33337e-05, 1, -0.000112107, 0.0448596, 0.000109595, 0.998993, -24.6837, -3.09978, 35.01)
+[node name="allTreeForest" parent="Map/forestTrees" instance=ExtResource("8_7yui6")]
 
 [node name="river" type="Node3D" parent="Map"]
+
+[node name="allGrass" parent="Map" instance=ExtResource("9_7yui6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.030623, 0)
+
+[node name="cornPlot" parent="." instance=ExtResource("10_c5t2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.2366, 0.231026, 4.59014)
+
+[node name="cornPlot2" parent="." instance=ExtResource("10_c5t2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.6533, 0.231026, 4.59014)
 
 [node name="TheDrunk" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81556, 2.15196, 1.87635)
