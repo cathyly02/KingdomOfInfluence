@@ -1,29 +1,37 @@
 extends Node
+
 @onready var fade_transition = $FadeTransition
-@onready var loading_screen = $LoadingScreen
+@onready var loading_screen = $Cutscene
+@onready var cutscene_animation_player = get_node("Cutscene/camRig/AnimationPlayer")
 var menu_scene = preload("res://Scenes/Menu.tscn")
+@onready var menu_Screen = $Menu
 
 func _ready():
 	# Hide loading screen initially
 	loading_screen.visible = false
+	menu_Screen.visible = false
+	
+	# Show loading screen
+	loading_screen.visible = true
+	
+	# Play cutscene animation
+	print("Starting cutscene animation")
+	cutscene_animation_player.play("camera")
+	print("Waiting for animation to finish")
+	await cutscene_animation_player.animation_finished
+	print("Animation finished - starting fade out")
 	
 	# Start with fade from black
 	fade_transition.fade_in()
 	await fade_transition.fade_completed
 	
-	# Show loading screen
-	loading_screen.visible = true
+	# Hide loading screen after the fade-in is done
+	loading_screen.visible = false
+	menu_Screen.visible = true
 	
-	# Simulate loading time (replace with actual loading later)
-	await get_tree().create_timer(2.0).timeout
-	
-	# Prepare to transition to menu
+	# Fade out to black
 	fade_transition.fade_out()
 	await fade_transition.fade_completed
 	
-	# Hide loading screen
-	loading_screen.visible = false
-	
-	# Instance the menu 
-	var menu_instance = menu_scene.instantiate()
-	add_child(menu_instance)
+	# Now change the scene after the fade-out
+	get_tree().change_scene_to_packed(menu_scene)

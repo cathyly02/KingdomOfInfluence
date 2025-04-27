@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkowq4ar7chwg"]
+
+[ext_resource type="Script" uid="uid://dsuevamx7w7qh" path="res://woodland_particles.gd" id="1_sc7kq"]
+
+[node name="woodland_particles" type="Node3D"]
+script = ExtResource("1_sc7kq")
