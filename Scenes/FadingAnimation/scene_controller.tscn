@@ -1,0 +1,19 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2ud1b4ptx2gy"]
+
+[ext_resource type="Script" uid="uid://cwuustg8r2ckb" path="res://scene_controller.gd" id="1_7jqep"]
+[ext_resource type="PackedScene" uid="uid://s35oqvbjthmy" path="res://Scenes/FadingAnimation/fade_transition.tscn" id="2_cn6lw"]
+[ext_resource type="PackedScene" uid="uid://oyllpjs5aawb" path="res://Scenes/FadingAnimation/loading_screen.tscn" id="3_mby2k"]
+[ext_resource type="PackedScene" uid="uid://bbfmct66wsbge" path="res://Scenes/cutsceneWorld.tscn" id="4_71dor"]
+[ext_resource type="PackedScene" uid="uid://vr6a8b8lx7jk" path="res://Scenes/Menu.tscn" id="5_j1sy4"]
+
+[node name="SceneController" type="Node"]
+script = ExtResource("1_7jqep")
+
+[node name="FadeTransition" parent="." instance=ExtResource("2_cn6lw")]
+
+[node name="LoadingScreen" parent="." instance=ExtResource("3_mby2k")]
+visible = false
+
+[node name="Cutscene" parent="." instance=ExtResource("4_71dor")]
+
+[node name="Menu" parent="." instance=ExtResource("5_j1sy4")]
