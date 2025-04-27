@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=46 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -27,6 +27,7 @@
 [ext_resource type="AudioStream" uid="uid://xe8coiydk4l0" path="res://assests/sound/chords/GDown.mp3" id="18_pt3ps"]
 [ext_resource type="AudioStream" uid="uid://bu0m7depg202l" path="res://assests/sound/chords/GUp.mp3" id="19_hmc15"]
 [ext_resource type="Script" uid="uid://cnp0x6qkc4jwf" path="res://Scenes/runAway.gd" id="23_xbk3s"]
+[ext_resource type="PackedScene" uid="uid://drh0nx2h4mm3m" path="res://assests/Guitar1.fbx" id="24_1vso6"]
 [ext_resource type="PackedScene" uid="uid://dxbxw66t0j633" path="res://assests/nature/animal/ChickenBrown.fbx" id="24_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://bdevs6qkebdtu" path="res://assests/nature/animal/CowBlW.fbx" id="25_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://knm3obn4jo2u" path="res://assests/nature/animal/SheepWhite.fbx" id="26_hmc15"]
@@ -1617,6 +1618,7 @@ script = ExtResource("13_c5t2i")
 Am = Array[AudioStream]([ExtResource("14_pyn1s"), ExtResource("15_no8kt")])
 C = Array[AudioStream]([ExtResource("16_xbk3s"), ExtResource("17_i4fjy")])
 G = Array[AudioStream]([ExtResource("18_pt3ps"), ExtResource("19_hmc15")])
+model_scene = ExtResource("24_1vso6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Guitar"]
 
