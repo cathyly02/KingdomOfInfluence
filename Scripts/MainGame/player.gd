@@ -4,7 +4,7 @@ extends CharacterBody3D
 # variables for player details
 @onready var npc = get_node("/root/world/TheDrunk/DrunkardNPC") # path to the node
 
-const SPEED = 5.0
+var SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 @export var turn = 10
 @export var jumpImpulse = 10
@@ -75,10 +75,16 @@ func _physics_process(delta):
 		$AnimationPlayer.play("playerAnimPack/jump")
 	else:	
 		if input_dir:
-			$AnimationPlayer.play("playerAnimPack/run")
+			# check for sprint
+			if Input.is_action_just_pressed("sprint") || SPEED == 7:
+				SPEED = 7
+				$AnimationPlayer.play("playerAnimPack/run")
+			else:
+				$AnimationPlayer.play("playerAnimPack2/walk")
 		else:
 			$AnimationPlayer.play("playerAnimPack/idle")
-	
+			SPEED = 3
+
 	if direction:
 		velocity.x = direction.x * SPEED 
 		velocity.z = direction.z * SPEED 

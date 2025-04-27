@@ -1,19 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://dm7xlcc2ossri"]
+[gd_scene load_steps=3 format=3 uid="uid://dm7xlcc2ossri"]
 
 [ext_resource type="PackedScene" uid="uid://cyh5ty15w04nk" path="res://Scenes/Instances/character.tscn" id="1_d84nr"]
-[ext_resource type="Script" uid="uid://dyadfgx22fcby" path="res://Scripts/MainGame/player.gd" id="2_c8fsd"]
 [ext_resource type="Script" uid="uid://bgfldskcv238f" path="res://Scripts/MainGame/camMovement.gd" id="3_2d8xa"]
-[ext_resource type="Texture2D" uid="uid://b8i0urtuieicu" path="res://assests/Skins/criminalMaleA.png" id="3_5mnss"]
-[ext_resource type="Texture2D" uid="uid://d4ln8y5hopefd" path="res://assests/Skins/cyborgFemaleA.png" id="4_y2ydg"]
-[ext_resource type="Texture2D" uid="uid://cy5svfmcueksu" path="res://assests/Skins/skaterFemaleA.png" id="5_igq0a"]
-[ext_resource type="Texture2D" uid="uid://delalcivwnxwb" path="res://assests/Skins/skaterMaleA.png" id="6_q76u8"]
 
 [node name="PlayerMovement" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_d84nr")]
 collision_mask = 131
-script = ExtResource("2_c8fsd")
-skins = Array[Texture2D]([ExtResource("3_5mnss"), ExtResource("4_y2ydg"), ExtResource("5_igq0a"), ExtResource("6_q76u8")])
 
 [node name="CameraOrigin" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
