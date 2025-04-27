@@ -23,8 +23,20 @@ Global="*res://Global.gd"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"VillageDrunk": "res://addons/dialogic/Timelines/VillageDrunk.dch",
+"dialog/VillageDrunk": "res://dialog/VillageDrunk.dch"
+}
+directories/dtl_directory={
+"VillageDrunkTimeline1": "res://addons/dialogic/Timelines/VillageDrunkTimeline1.dtl",
+"VillageDrunkTimeline2": "res://addons/dialogic/Timelines/VillageDrunkTimeline2.dtl",
+"VillageDrunkTimeline3": "res://addons/dialogic/Timelines/VillageDrunkTimeline3.dtl",
+"VillageDrunkTimeline4": "res://addons/dialogic/Timelines/VillageDrunkTimeline4.dtl",
+"dialog/VillageDrunkTimeline1": "res://dialog/VillageDrunkTimeline1.dtl",
+"dialog/VillageDrunkTimeline2": "res://dialog/VillageDrunkTimeline2.dtl",
+"dialog/VillageDrunkTimeline3": "res://dialog/VillageDrunkTimeline3.dtl",
+"dialog/VillageDrunkTimeline4": "res://dialog/VillageDrunkTimeline4.dtl"
+}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"

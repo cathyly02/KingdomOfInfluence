@@ -50,8 +50,15 @@ func release_mouse():
 func _process(delta):
 	# Sync the parent Node3D to the character's global position
 	camOrigin.global_position = Vector3(global_position.x,global_position.y + 1.5, global_position.z)
-	var rotationOverride = npc.rotationOverride
-	# Rotate character with camera in first-person mode
+	
+	# Declare the variable FIRST before any conditional blocks
+	var rotationOverride = false
+	
+	# Then check conditions and modify it if needed
+	if npc and npc.has_method("get") and npc.get("rotationOverride") != null:
+		rotationOverride = npc.rotationOverride
+	
+	# Now use the variable in the next conditional
 	if springArm.spring_length <= 0 and not rotationOverride:
 		var camera_yaw = camH.rotation.y
 		rotation.y = (135 + camera_yaw)
