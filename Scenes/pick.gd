@@ -17,8 +17,9 @@ var bodyName
 #check if player endered area
 func _on_body_entered(body):
 	bodyName = body.name
-	print(body.name, " entered the area!")
-	inside = true
+	if bodyName == "Player":
+		print(body.name, " entered the area!")
+		inside = true
 
 #check if plauer exited bodyu
 func _on_body_exited(body):
@@ -32,14 +33,14 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("interact"):
 			print("interacted")
 			# if wheat is grown, remove wheatr
+			var first_child = parent_node.get_child(0)
 
-			remove()
+			if first_child != null and animator.current_animation != "playerAnimPack2/pickingFruit":
+				remove(first_child)
 
 
-func remove():
-	var first_child = parent_node.get_child(0)
-
-	if first_child != null and animator.current_animation != "playerAnimPack2/pickingFruit":
+func remove(first_child):
+	
 		animator.play("playerAnimPack2/pickingFruit")
 		await get_tree().create_timer(5).timeout
 		# remove instance of wheat
