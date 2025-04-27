@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=21 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://ewc47bsrxwmq" path="res://assests/nature/instances/tent_detailedOpen.glb" id="4_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://budpoagrxxpnv" path="res://assests/nature/ForestPack.tscn/fourTreeCluster.tscn" id="8_ikia7"]
 [ext_resource type="PackedScene" uid="uid://d1naoshio10uw" path="res://assests/nature/instances/campfire_stones.glb" id="9_0fj1v"]
+[ext_resource type="PackedScene" uid="uid://cdqsnehepsljo" path="res://assests/nature/GrassClusters/all_grass.tscn" id="9_7yui6"]
 [ext_resource type="PackedScene" uid="uid://cxvjeapfatiax" path="res://assests/nature/instances/log_stack.glb" id="10_7yui6"]
+[ext_resource type="PackedScene" uid="uid://dfrpvmttprmjq" path="res://assests/nature/farm/corn_plot.tscn" id="10_c5t2i"]
 [ext_resource type="PackedScene" uid="uid://8fpuflq6tjdh" path="res://assests/nature/instances/campfire_logs.glb" id="10_ikia7"]
 [ext_resource type="PackedScene" uid="uid://rji5av6txomv" path="res://Models/GLB_format/barrel.glb" id="14_e0ngr"]
 [ext_resource type="AudioStream" uid="uid://iw57otolqehs" path="res://assests/sound/lofi.mp3" id="15_7yui6"]
@@ -328,6 +330,14 @@ transform = Transform3D(0.307504, -5.832e-05, -0.951547, -8.63605e-05, 1, -8.918
 transform = Transform3D(0.998993, -5.832e-05, -0.0448596, 5.33337e-05, 1, -0.000112107, 0.0448596, 0.000109595, 0.998993, -24.6837, -3.09978, 35.01)
 
 [node name="river" type="Node3D" parent="Map"]
+
+[node name="allGrass" parent="Map" instance=ExtResource("9_7yui6")]
+
+[node name="cornPlot" parent="." instance=ExtResource("10_c5t2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.2366, 0.231026, 4.59014)
+
+[node name="cornPlot2" parent="." instance=ExtResource("10_c5t2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.6533, 0.231026, 4.59014)
 
 [node name="TheDrunk" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81556, 2.15196, 1.87635)
