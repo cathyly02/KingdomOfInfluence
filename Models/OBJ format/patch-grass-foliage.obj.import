@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://23clmoit0dxi"
+path="res://.godot/imported/patch-grass-foliage.obj-76ee1540cfd9ce965a19c261216db923.mesh"
+
+[deps]
+
+files=["res://.godot/imported/patch-grass-foliage.obj-76ee1540cfd9ce965a19c261216db923.mesh"]
+
+source_file="res://Models/OBJ format/patch-grass-foliage.obj"
+dest_files=["res://.godot/imported/patch-grass-foliage.obj-76ee1540cfd9ce965a19c261216db923.mesh", "res://.godot/imported/patch-grass-foliage.obj-76ee1540cfd9ce965a19c261216db923.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
