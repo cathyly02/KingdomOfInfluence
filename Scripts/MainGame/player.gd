@@ -65,7 +65,7 @@ func _process(delta):
 
 	
 func _physics_process(delta):
-
+	var sound = get_node("/root/world/Guitar/AudioStreamPlayer")
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "up", "down")
 	var direction = (camH.transform.basis * Vector3(input_dir.x, 0, input_dir.y))
@@ -81,7 +81,7 @@ func _physics_process(delta):
 				$AnimationPlayer.play("playerAnimPack/run")
 			else:
 				$AnimationPlayer.play("playerAnimPack2/walk")
-		else:
+		elif !sound.playing and $AnimationPlayer.current_animation != "playerAnimPack2/pickingFruit":
 			$AnimationPlayer.play("playerAnimPack/idle")
 			SPEED = 3
 
