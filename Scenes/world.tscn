@@ -1,9 +1,10 @@
-[gd_scene load_steps=45 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=46 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://cl8f4l3gcog6l" path="res://assests/nature/instances/tent_detailedClosed.glb" id="3_8j60k"]
 [ext_resource type="PackedScene" uid="uid://ewc47bsrxwmq" path="res://assests/nature/instances/tent_detailedOpen.glb" id="4_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://dwtffaustv2ll" path="res://Scenes/Instances/fire.tscn" id="6_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://ddcugicxle0pt" path="res://assests/nature/ForestPack.tscn/all_tree_forest.tscn" id="8_7yui6"]
 [ext_resource type="PackedScene" uid="uid://d1naoshio10uw" path="res://assests/nature/instances/campfire_stones.glb" id="9_0fj1v"]
 [ext_resource type="PackedScene" uid="uid://cdqsnehepsljo" path="res://assests/nature/GrassClusters/all_grass.tscn" id="9_7yui6"]
@@ -306,6 +307,8 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.52495, 1, 9.39454)
 
 [node name="campfire_stones2" parent="Map" instance=ExtResource("9_0fj1v")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.805944, 1, 4.65057)
+
+[node name="fire" parent="Map/campfire_stones2" instance=ExtResource("6_o2rbt")]
 
 [node name="log_stack2" parent="Map" instance=ExtResource("10_7yui6")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.4558, 1, 4.30618)
