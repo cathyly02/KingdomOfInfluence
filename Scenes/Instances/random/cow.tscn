@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ca1rjtvll5t23"]
+
+[ext_resource type="Script" uid="uid://cnp0x6qkc4jwf" path="res://Scenes/runAway.gd" id="1_hpk0h"]
+[ext_resource type="PackedScene" uid="uid://bdevs6qkebdtu" path="res://assests/nature/animal/CowBlW.fbx" id="2_xbkda"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dt0r1"]
+radius = 0.422278
+height = 0.844556
+
+[node name="cow" type="CharacterBody3D"]
+collision_mask = 131
+script = ExtResource("1_hpk0h")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.360248, 0)
+shape = SubResource("CapsuleShape3D_dt0r1")
+
+[node name="CowBlW" parent="." instance=ExtResource("2_xbkda")]

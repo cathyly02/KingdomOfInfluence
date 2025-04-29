@@ -22,7 +22,10 @@ var fourth_slider_value = 0.0
 # creates skinn aray - function starts on ready 
 func _ready():
 	#play idle animation
+	var anim = $AnimationPlayer.get_animation("playerAnimPack/idle")
+	anim.loop = true  # Correct way to set looping
 	$AnimationPlayer.play("playerAnimPack/idle")
+
 	# Apply the default skin (optional)
 	if skins.size() > 0:
 		change_skin(1)

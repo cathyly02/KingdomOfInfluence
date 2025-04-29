@@ -3313,6 +3313,7 @@ bind/57/pose = Transform3D(-0.992789, 0.00958788, -0.119372, -0.119648, -0.03957
 albedo_texture = ExtResource("1_8ovvn")
 
 [node name="Player" type="CharacterBody3D"]
+collision_mask = 131
 script = ExtResource("2_axdwn")
 skins = Array[Texture2D]([ExtResource("2_pjt0s"), ExtResource("1_8ovvn"), ExtResource("4_cndpp"), ExtResource("5_yyhxr")])
 

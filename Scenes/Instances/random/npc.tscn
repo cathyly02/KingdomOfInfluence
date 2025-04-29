@@ -3317,15 +3317,18 @@ _data = {
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NpcArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("BoxShape3D_kn0ld")
 debug_color = Color(0.333684, 0.568122, 0.634635, 1)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="NpcArea"]
+collision_layer = 2
+collision_mask = 131
 script = ExtResource("1_hdu52")
 
 [node name="GeneralSkeleton" type="Skeleton3D" parent="NpcArea/CharacterBody3D"]
 unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
 motion_scale = 1.24222
 bones/0/name = "LeftFootCtrl"
 bones/0/parent = -1
@@ -3740,7 +3743,6 @@ skin = SubResource("Skin_tdn8e")
 surface_material_override/0 = SubResource("StandardMaterial3D_hgpy0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NpcArea/CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("CapsuleShape3D_axeuq")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="NpcArea/CharacterBody3D"]
