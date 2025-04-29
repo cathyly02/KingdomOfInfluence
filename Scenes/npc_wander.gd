@@ -5,7 +5,7 @@ extends CharacterBody3D
 @export var rotation_speed = 3.0
 @export var min_move_interval : float = 5.0
 @export var max_move_interval : float = 10.0
-
+@onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animator = $AnimationPlayer
 
@@ -30,6 +30,9 @@ func _process(delta):
 	if random_timer <= 0:
 		switch_movement_mode()
 
+func _physics_process(delta: float) -> void:
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 func follow_path(delta):
 	if navigation_agent.is_navigation_finished():
 		# Pick a new target if finished
