@@ -18,24 +18,24 @@ var bodyName
 func _on_body_entered(body):
 	bodyName = body.name
 	if (bodyName == "Player"):
-		get_node("/root/Global").current_npc = self
 		Dialogic.paused = false
 		inside = true
 		print(body.name, " is in front of ", self.name)
 
 func _on_body_exited(body):
-	print(body.name, " is not in front of npc")
 	if (bodyName == "Player"):
 		Dialogic.paused = true
 		Dialogic.clear()
 		get_node("/root/Global").current_npc = null
 		inside = false
+		print(body.name, " is not in front of npc")
 	
 func _process(delta: float) -> void:
 	if inside:
 		if Input.is_action_just_pressed("interact"):
 			print("interacted")
-			determineNPCDialog()
+			get_node("/root/Global").current_npc = self
+			determineNPCDialog(Global.current_npc)
 			teleport_player_relative_to_object(Vector3(0, 0, -2))
 						# Shorten the camera arm
 			springArm.spring_length = 0
@@ -61,11 +61,11 @@ func _process(delta: float) -> void:
 	else:
 		rotationOverride = false	
 			
-func determineNPCDialog():
-	match Global.current_npc.name:
+func determineNPCDialog(npc):
+	match npc.name:
 		"DrunkardNPC":
 			randomDialog()
-		"FarmerNPC":
+		"FarmerBody":
 			print("We farming")
 		_:
 			print("TODO")
