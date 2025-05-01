@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=45 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://dk1bitc3te2vf" path="res://Scenes/Instances/random/chicken.tscn" id="27_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://ca1rjtvll5t23" path="res://Scenes/Instances/random/cow.tscn" id="28_1vso6"]
 [ext_resource type="PackedScene" uid="uid://u1lrrxanvvo2" path="res://Scenes/Instances/random/sheep.tscn" id="30_3ua1v"]
+[ext_resource type="PackedScene" uid="uid://dgsm6tirhfohh" path="res://Scenes/Instances/chicken_2.tscn" id="31_1vso6"]
 
 [sub_resource type="Environment" id="Environment_go701"]
 background_mode = 1
@@ -812,4 +813,4 @@ shape = SubResource("BoxShape3D_axeuq")
 
 [node name="ModelGeneration" type="Node3D" parent="."]
 script = ExtResource("26_pt3ps")
-object_scenes = Array[PackedScene]([ExtResource("27_o2rbt"), ExtResource("28_1vso6"), ExtResource("15_1vso6"), ExtResource("30_3ua1v")])
+object_scenes = Array[PackedScene]([ExtResource("27_o2rbt"), ExtResource("28_1vso6"), ExtResource("15_1vso6"), ExtResource("30_3ua1v"), ExtResource("31_1vso6")])
