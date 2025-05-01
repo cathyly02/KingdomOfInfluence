@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgsm6tirhfohh"]
+[gd_scene load_steps=5 format=3 uid="uid://dgsm6tirhfohh"]
 
 [ext_resource type="PackedScene" uid="uid://b216o2s83x7ty" path="res://testing/chicken.glb" id="1_hvpp3"]
+[ext_resource type="Script" uid="uid://burfphmst4wl0" path="res://Scenes/Instances/random/chickenAnim.gd" id="2_3gwdv"]
 
 [sub_resource type="Animation" id="Animation_hvpp3"]
 resource_name = "walking"
@@ -103,6 +104,7 @@ _data = {
 }
 
 [node name="chicken2" instance=ExtResource("1_hvpp3")]
+script = ExtResource("2_3gwdv")
 
 [node name="Skeleton3D" parent="chicken" index="0"]
 bones/0/rotation = Quaternion(0.557363, -1.68259e-06, -1.12953e-06, 0.830269)
@@ -110,12 +112,12 @@ bones/2/rotation = Quaternion(-0.0472797, 0.0404937, -0.0124481, 0.997983)
 bones/3/rotation = Quaternion(-0.629094, 0.0120869, 0.0131948, 0.777124)
 bones/4/rotation = Quaternion(0.219703, -0.00965154, 0.00705418, 0.975494)
 bones/5/rotation = Quaternion(-0.0349917, 0.193045, 0.966701, 0.164312)
-bones/7/rotation = Quaternion(0.403155, 0.0715124, 0.115035, 0.905052)
+bones/7/rotation = Quaternion(0.403155, 0.0715123, 0.115035, 0.905052)
 bones/8/rotation = Quaternion(0.597238, -0.0633965, -0.065019, 0.796907)
-bones/9/rotation = Quaternion(-0.242906, -0.00760635, -0.63104, 0.736701)
+bones/9/rotation = Quaternion(-0.242906, -0.00760634, -0.63104, 0.736701)
 bones/10/rotation = Quaternion(-0.409119, -0.0386201, -0.0173848, 0.911498)
 bones/11/rotation = Quaternion(0.0367677, 0.18509, 0.965439, -0.179772)
-bones/13/rotation = Quaternion(0.407874, -0.0485269, -0.135482, 0.901625)
+bones/13/rotation = Quaternion(0.407874, -0.048527, -0.135482, 0.901625)
 bones/14/rotation = Quaternion(0.583522, -0.0210208, 0.0173929, 0.811639)
 bones/16/rotation = Quaternion(-0.42347, 0.023888, 0.0794354, 0.902105)
 

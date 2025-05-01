@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dk1bitc3te2vf"]
 
 [ext_resource type="Script" uid="uid://cnp0x6qkc4jwf" path="res://Scenes/runAway.gd" id="1_jom4r"]
-[ext_resource type="PackedScene" uid="uid://dxbxw66t0j633" path="res://assests/nature/animal/ChickenBrown.fbx" id="2_1yhhb"]
+[ext_resource type="PackedScene" uid="uid://dgsm6tirhfohh" path="res://Scenes/Instances/random/chicken_2.tscn" id="2_jom4r"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_pt3ps"]
 radius = 0.395169
@@ -10,8 +10,8 @@ radius = 0.395169
 collision_mask = 131
 script = ExtResource("1_jom4r")
 
-[node name="ChickenBrown" parent="." instance=ExtResource("2_1yhhb")]
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.360248, 0)
 shape = SubResource("SphereShape3D_pt3ps")
+
+[node name="chicken2" parent="." instance=ExtResource("2_jom4r")]
