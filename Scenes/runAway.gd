@@ -49,6 +49,8 @@ func _physics_process(delta):
 	# Move the animal
 	move_and_slide()
 
+		
+
 # Function to rotate the animal smoothly towards a given direction using atan2
 func rotate_towards(direction: Vector3, delta: float) -> void:
 	# Only rotate if there is movement
