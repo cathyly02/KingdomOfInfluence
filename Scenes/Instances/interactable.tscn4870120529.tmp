@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw45t3fds1d3u"]
+
+[ext_resource type="Script" uid="uid://8dnkln0bycv3" path="res://Scripts/interactable.gd" id="1_rkv1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_we1ot"]
+size = Vector3(1, 0.272461, 1)
+
+[node name="Interactable" type="Area3D"]
+script = ExtResource("1_rkv1m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_we1ot")
+
+[node name="Label3D" type="Label3D" parent="."]
+visible = false
+text = "E"
