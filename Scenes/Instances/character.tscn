@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=4 uid="uid://cyh5ty15w04nk"]
 
 [ext_resource type="Texture2D" uid="uid://d4ln8y5hopefd" path="res://assests/Skins/cyborgFemaleA.png" id="1_8ovvn"]
-[ext_resource type="Script" uid="uid://dyadfgx22fcby" path="res://Scripts/MainGame/player.gd" id="2_axdwn"]
+[ext_resource type="Script" uid="uid://dyadfgx22fcby" path="res://Scripts/MainGame/player/player.gd" id="2_axdwn"]
 [ext_resource type="Texture2D" uid="uid://b8i0urtuieicu" path="res://assests/Skins/criminalMaleA.png" id="2_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://cy5svfmcueksu" path="res://assests/Skins/skaterFemaleA.png" id="4_cndpp"]
 [ext_resource type="Texture2D" uid="uid://delalcivwnxwb" path="res://assests/Skins/skaterMaleA.png" id="5_yyhxr"]

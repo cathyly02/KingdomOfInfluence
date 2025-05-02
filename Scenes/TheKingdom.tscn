@@ -1,11 +1,11 @@
 [gd_scene load_steps=24 format=4 uid="uid://cihtq6nvfxmwe"]
 
-[ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scenes/npc.gd" id="1_hqil2"]
+[ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scripts/MainGame/npc/npc.gd" id="1_hqil2"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="1_rp3lj"]
 [ext_resource type="Texture2D" uid="uid://delalcivwnxwb" path="res://assests/Skins/skaterMaleA.png" id="2_d16qk"]
 [ext_resource type="PackedScene" uid="uid://dgrvdhl6houjh" path="res://assests/fantasy town models/fountainRound.glb" id="2_vxa0k"]
 [ext_resource type="PackedScene" uid="uid://xw4mindte31t" path="res://assests/nature/instances/statue_column.glb" id="3_cr1yu"]
-[ext_resource type="PackedScene" uid="uid://rji5av6txomv" path="res://Models/GLB_format/barrel.glb" id="3_objsd"]
+[ext_resource type="PackedScene" path="res://Models/GLB_format/barrel.glb" id="3_objsd"]
 [ext_resource type="MeshLibrary" uid="uid://p2c0j05nuoa2" path="res://testing/worldmeshlib.tres" id="5_hqil2"]
 [ext_resource type="PackedScene" uid="uid://ddib33eeqqo8x" path="res://Scenes/Instances/buildings/house_1.tscn" id="8_wi7no"]
 [ext_resource type="PackedScene" uid="uid://jggiocmc54k0" path="res://Scenes/Instances/buildings/house_2.tscn" id="9_37mea"]

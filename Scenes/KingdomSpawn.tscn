@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://y3oos8g7jth" path="res://assests/material/tiles/checkerboard.png" id="1_cj8rm"]
 [ext_resource type="PackedScene" uid="uid://ewc47bsrxwmq" path="res://assests/nature/instances/tent_detailedOpen.glb" id="1_fbvpl"]
 [ext_resource type="Texture2D" uid="uid://b8i0urtuieicu" path="res://assests/Skins/criminalMaleA.png" id="6_r6alr"]
-[ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scenes/npc.gd" id="10_8arhk"]
+[ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scripts/MainGame/npc/npc.gd" id="10_8arhk"]
 [ext_resource type="PackedScene" uid="uid://b6n2y7nssym1m" path="res://assests/nature/instances/crops_dirtSingle.glb" id="10_8iruv"]
 [ext_resource type="Script" uid="uid://bi0omkc5bw40s" path="res://Scripts/MainGame/dirpatch.gd" id="10_f2052"]
 [ext_resource type="PackedScene" uid="uid://bko0pamxw5hev" path="res://assests/nature/instances/pineTree.tscn" id="10_tq6qv"]

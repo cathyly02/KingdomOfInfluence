@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dm7xlcc2ossri"]
 
 [ext_resource type="PackedScene" uid="uid://cyh5ty15w04nk" path="res://Scenes/Instances/character.tscn" id="1_d84nr"]
-[ext_resource type="Script" uid="uid://bgfldskcv238f" path="res://Scripts/MainGame/camMovement.gd" id="3_2d8xa"]
+[ext_resource type="Script" uid="uid://bgfldskcv238f" path="res://Scripts/MainGame/player/camMovement.gd" id="3_2d8xa"]
 
 [node name="PlayerMovement" type="Node3D"]
 
