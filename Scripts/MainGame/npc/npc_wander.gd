@@ -33,22 +33,27 @@ func _process(delta):
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
+	else:
+		velocity.y = 0  # Reset vertical speed when on the floor
 func follow_path(delta):
 	if navigation_agent.is_navigation_finished():
-		# Pick a new target if finished
 		if target_position == Vector3.ZERO:
 			set_random_target_position()
 			navigation_agent.target_position = target_position
-			rotate_towards(target_position, delta)
+		rotate_towards(target_position, delta)
 	else:
 		var direction = (navigation_agent.get_next_path_position() - global_position).normalized()
-		velocity = direction * move_speed
+		velocity.x = direction.x * move_speed
+		velocity.z = direction.z * move_speed
+		# DO NOT touch velocity.y here; let gravity handle it
 		rotate_towards(direction, delta)
 		move_and_slide()
 
 func move_randomly(delta):
 	var direction = (random_target_position - global_position).normalized()
-	velocity = direction * move_speed
+	velocity.x = direction.x * move_speed
+	velocity.z = direction.z * move_speed
+	# DO NOT touch velocity.y
 	rotate_towards(direction, delta)
 	move_and_slide()
 
