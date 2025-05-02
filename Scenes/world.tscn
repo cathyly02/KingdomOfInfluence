@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=45 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -26,6 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://xe8coiydk4l0" path="res://assests/sound/chords/GDown.mp3" id="18_pt3ps"]
 [ext_resource type="AudioStream" uid="uid://bu0m7depg202l" path="res://assests/sound/chords/GUp.mp3" id="19_hmc15"]
 [ext_resource type="PackedScene" uid="uid://drh0nx2h4mm3m" path="res://assests/Guitar1.fbx" id="24_1vso6"]
+[ext_resource type="PackedScene" uid="uid://bw45t3fds1d3u" path="res://Scenes/Instances/interactable.tscn" id="25_1vso6"]
 [ext_resource type="Script" uid="uid://b3g44u4e06wmy" path="res://Scripts/MainGame/modelGeneration.gd" id="26_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://dk1bitc3te2vf" path="res://Scenes/Instances/random/chicken.tscn" id="27_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://ca1rjtvll5t23" path="res://Scenes/Instances/random/cow.tscn" id="28_1vso6"]
@@ -798,6 +799,9 @@ script = ExtResource("14_hgpy0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="flower"]
 shape = SubResource("BoxShape3D_axeuq")
+
+[node name="Interactable" parent="flower" instance=ExtResource("25_1vso6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 
 [node name="muhroom" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.6, -10)

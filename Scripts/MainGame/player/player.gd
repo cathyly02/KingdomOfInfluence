@@ -21,7 +21,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 #skin mesh testures
 @export var skins: Array[Texture2D]
 
-
 func _ready():
 	# set mesh
 	var mesh = $GeneralSkeleton/characterMedium
@@ -109,7 +108,3 @@ func _physics_process(delta):
 
 	move_and_slide()
 	var v = Vector3(0, 0, 0)
-
-
-
-	
