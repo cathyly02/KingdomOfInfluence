@@ -1,0 +1,10 @@
+label BodyLanguage
+Try to read their body language and clues in their environment. How should you start the conversation?
+- Is everything okay?
+	CaravanOwner: One of our wheels dislodged. Our chickens are everywhere!
+	- I'll help you find your chickens!
+		CaravanOwner: Thank you! They're special chickens. Made of gold! You can't miss them!
+		do Global.startNPCQuest()
+- You can't park there!
+	That may not have been the correct response because they seem kind of upset.
+	jump CaravanOwner/BodyLanguage

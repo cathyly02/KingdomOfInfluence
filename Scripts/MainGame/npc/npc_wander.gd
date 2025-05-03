@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var rotation_speed = 3.0
 @export var min_move_interval : float = 5.0
 @export var max_move_interval : float = 10.0
+@export var stationary: bool
 @onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animator = $AnimationPlayer
@@ -29,15 +30,16 @@ func _process(delta):
 		#otherwise player is still there
 		return
 	
-	if is_random_move:
-		move_randomly(delta)
-		animator.play("playerAnimPack2/walk")
-	else:
-		follow_path(delta)
+	if (!stationary):
+		if is_random_move:
+			move_randomly(delta)
+			animator.play("playerAnimPack2/walk")
+		else:
+			follow_path(delta)
 
-	random_timer -= delta
-	if random_timer <= 0:
-		switch_movement_mode()
+		random_timer -= delta
+		if random_timer <= 0:
+			switch_movement_mode()
 #checks if player is in front of npc
 func player_is_in_front()-> bool:
 	var to_player = (player.global_position - global_position).normalized()

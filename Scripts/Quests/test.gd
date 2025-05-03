@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var quest: Quest
+@export var quest: ChickenQuest
 
 func _ready():
 	self.body_entered.connect(_on_body_entered)
