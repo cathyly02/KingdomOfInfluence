@@ -814,6 +814,9 @@ script = ExtResource("14_hgpy0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="muhroom"]
 shape = SubResource("BoxShape3D_axeuq")
 
+[node name="Interactable" parent="muhroom" instance=ExtResource("25_1vso6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+
 [node name="ModelGeneration" type="Node3D" parent="."]
 script = ExtResource("26_pt3ps")
 object_scenes = Array[PackedScene]([ExtResource("28_1vso6"), ExtResource("15_1vso6"), ExtResource("30_3ua1v"), ExtResource("27_o2rbt")])

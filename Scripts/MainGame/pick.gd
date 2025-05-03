@@ -4,6 +4,8 @@ extends Area3D
 @export var stageB: Texture2D
 @onready var parent_node = get_child(0)
 @onready var animator = get_node("/root/world/PlayerMovement/Player/AnimationPlayer")
+@onready var player = get_node("/root/world/PlayerMovement/Player")
+var interactable = true
 
 
 func _ready():
@@ -32,16 +34,22 @@ func _process(delta: float) -> void:
 		print("inside")
 		if Input.is_action_just_pressed("interact"):
 			print("interacted")
+			player.action = true
 			# if wheat is grown, remove wheatr
 			var first_child = parent_node.get_child(0)
-
+			
 			if first_child != null and animator.current_animation != "playerAnimPack2/pickingFruit":
 				remove(first_child)
 
 
 func remove(first_child):
-	
+		interactable = false
+		
 		animator.play("playerAnimPack2/pickingFruit")
 		await get_tree().create_timer(5).timeout
+		var childNode = $Interactable
+		childNode.interact_label.visible = false
+		player.action = false
 		# remove instance of wheat
-		first_child.queue_free()  # Delete it safely
+		if first_child != null:
+			first_child.queue_free()  # Delete it safely

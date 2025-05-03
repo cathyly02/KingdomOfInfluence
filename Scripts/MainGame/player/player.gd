@@ -4,7 +4,7 @@ extends CharacterBody3D
 # variables for player details
 @onready var npc = get_node("/root/world/TheDrunk/DrunkardNPC") # path to the node
 
-var SPEED = 5.0
+var SPEED = 0
 const JUMP_VELOCITY = 4.5
 @export var turn = 10
 @export var jumpImpulse = 10
@@ -17,6 +17,7 @@ var jumping := true
 var mouse_captured := true
 # gravity woahhh
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var action = false
 
 #skin mesh testures
 @export var skins: Array[Texture2D]
@@ -61,13 +62,17 @@ func _process(delta):
 	if springArm.spring_length <= 0 and not rotationOverride:
 		var camera_yaw = camH.rotation.y
 		rotation.y = (135 + camera_yaw)
+		
 
 	
 func _physics_process(delta):
 	var sound = get_node("/root/world/Guitar/AudioStreamPlayer")
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir = Input.get_vector("left", "right", "up", "down")
-	var direction = (camH.transform.basis * Vector3(input_dir.x, 0, input_dir.y))
+	var direction
+	var input_dir
+	if !action:
+		input_dir = Input.get_vector("left", "right", "up", "down")
+		direction = (camH.transform.basis * Vector3(input_dir.x, 0, input_dir.y))
 	
 	if not is_on_floor():
 		velocity.y -= gravity * delta
