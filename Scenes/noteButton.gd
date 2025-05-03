@@ -3,7 +3,7 @@ extends Sprite3D
 @export var input: String  # fixed typo: "Stirng" → "String"
 
 func _process(delta):
-	print(texture)
+
 	change_sprite()
 
 func change_sprite():
