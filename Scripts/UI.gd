@@ -3,7 +3,21 @@ extends Node
 @onready var ui = get_node("UI")
 var inventory_open = false
 
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Inventory"):
+func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Inventory"):
 		inventory_open = !inventory_open
 		ui.visible = inventory_open
+		await pauseGame()
+
+func pauseGame() -> void:
+	get_tree().paused = inventory_open
+
+	if inventory_open:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	else:
+		await get_tree().process_frame
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

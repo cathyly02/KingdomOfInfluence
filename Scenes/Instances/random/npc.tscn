@@ -3098,7 +3098,7 @@ _data = {
 &"walk": SubResource("Animation_840ug")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kn0ld"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_coyub"]
 size = Vector3(4.46299, 1.75092, 4.10132)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e0ngr"]
@@ -3337,7 +3337,7 @@ script = ExtResource("3_qm83y")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="CharacterBody3D/NpcArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-shape = SubResource("BoxShape3D_kn0ld")
+shape = SubResource("BoxShape3D_coyub")
 debug_color = Color(0.333684, 0.568122, 0.634635, 1)
 
 [node name="GeneralSkeleton" type="Skeleton3D" parent="CharacterBody3D"]
