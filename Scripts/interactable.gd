@@ -13,9 +13,11 @@ func _process(delta):
 		interact_label.look_at(camera.global_transform.origin, Vector3.UP)
 
 func _on_body_entered(body):
-	print("SHOW E")
-	if body.name == "Player":
-		interact_label.visible = true
+	var parentNode = get_parent()
+	if parentNode.interactable == true:
+		print("SHOW E")
+		if body.name == "Player":
+			interact_label.visible = true
 
 func _on_body_exited(body):
 	if body.name == "Player":
