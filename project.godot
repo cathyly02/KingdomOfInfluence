@@ -25,10 +25,13 @@ GameManager="*res://Scenes/GameManager.tscn"
 [dialogic]
 
 directories/dch_directory={
+"CaravanOwner": "res://addons/dialogic/Timelines/CaravanOwner.dch",
 "VillageDrunk": "res://addons/dialogic/Timelines/VillageDrunk.dch",
 "dialog/VillageDrunk": "res://dialog/VillageDrunk.dch"
 }
 directories/dtl_directory={
+"CaravanOwner1": "res://addons/dialogic/Timelines/CaravanOwner1.dtl",
+"CaravanOwner2": "res://addons/dialogic/Timelines/CaravanOwner2.dtl",
 "VillageDrunkTimeline1": "res://addons/dialogic/Timelines/VillageDrunkTimeline1.dtl",
 "VillageDrunkTimeline2": "res://addons/dialogic/Timelines/VillageDrunkTimeline2.dtl",
 "VillageDrunkTimeline3": "res://addons/dialogic/Timelines/VillageDrunkTimeline3.dtl",

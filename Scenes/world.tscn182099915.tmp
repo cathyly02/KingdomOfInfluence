@@ -25,13 +25,13 @@
 [ext_resource type="AudioStream" uid="uid://df3klhv1b5ssl" path="res://assests/sound/chords/CUp.mp3" id="17_i4fjy"]
 [ext_resource type="AudioStream" uid="uid://xe8coiydk4l0" path="res://assests/sound/chords/GDown.mp3" id="18_pt3ps"]
 [ext_resource type="AudioStream" uid="uid://bu0m7depg202l" path="res://assests/sound/chords/GUp.mp3" id="19_hmc15"]
+[ext_resource type="PackedScene" uid="uid://drh0nx2h4mm3m" path="res://assests/Guitar1.fbx" id="24_1vso6"]
 [ext_resource type="PackedScene" uid="uid://bw45t3fds1d3u" path="res://Scenes/Instances/interactable.tscn" id="25_1vso6"]
 [ext_resource type="Script" uid="uid://b3g44u4e06wmy" path="res://Scripts/MainGame/modelGeneration.gd" id="26_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://dk1bitc3te2vf" path="res://Scenes/Instances/random/chicken.tscn" id="27_o2rbt"]
 [ext_resource type="PackedScene" uid="uid://ca1rjtvll5t23" path="res://Scenes/Instances/random/cow.tscn" id="28_1vso6"]
 [ext_resource type="PackedScene" uid="uid://u1lrrxanvvo2" path="res://Scenes/Instances/random/sheep.tscn" id="30_3ua1v"]
-[ext_resource type="PackedScene" uid="uid://d08505dfobnlx" path="res://assests/GuitarA.glb" id="32_3ua1v"]
-[ext_resource type="PackedScene" uid="uid://c13mnd4u5ls50" path="res://Scenes/Instances/caravan.tscn" id="32_r0ikl"]
+[ext_resource type="PackedScene" uid="uid://c13mnd4u5ls50" path="res://Scenes/Instances/caravan.tscn" id="32_3ua1v"]
 
 [sub_resource type="Environment" id="Environment_go701"]
 background_mode = 1
@@ -786,7 +786,7 @@ script = ExtResource("13_c5t2i")
 Am = Array[AudioStream]([ExtResource("14_pyn1s"), ExtResource("15_no8kt")])
 C = Array[AudioStream]([ExtResource("16_xbk3s"), ExtResource("17_i4fjy")])
 G = Array[AudioStream]([ExtResource("18_pt3ps"), ExtResource("19_hmc15")])
-model_scene = ExtResource("32_3ua1v")
+model_scene = ExtResource("24_1vso6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Guitar"]
 
@@ -822,5 +822,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 script = ExtResource("26_pt3ps")
 object_scenes = Array[PackedScene]([ExtResource("28_1vso6"), ExtResource("15_1vso6"), ExtResource("30_3ua1v"), ExtResource("27_o2rbt")])
 
-[node name="Caravan" parent="." instance=ExtResource("32_r0ikl")]
-transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -23.2, 0.6, 11.7)
+[node name="Caravan" parent="." instance=ExtResource("32_3ua1v")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -22.2, 0.6, 11.7)
