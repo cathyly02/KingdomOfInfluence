@@ -6,7 +6,7 @@ extends Node3D
 @export var C: Array[AudioStream]
 @export var G: Array[AudioStream]
 @export var model_scene : PackedScene  # Reference to the model's scene
-
+var guitar
 var spawned_model : Node3D = null
 
 func _process(delta):
@@ -31,6 +31,7 @@ func _process(delta):
 	# Check if a model exists and the chord is not pressed anymore, delete the model
 	if not (Input.is_action_pressed("Am") or Input.is_action_pressed("C") or Input.is_action_pressed("G")) and spawned_model:
 		delete_model()
+		
 
 	# Check for strumming action
 	if note.size() > 0 and Input.is_action_just_pressed("DownStrum"):
@@ -44,7 +45,9 @@ func _process(delta):
 		sound.play()
 	if sound.playing and spawned_model:
 		animator.play("playerAnimPack2/guitar")
-
+		$/root/world/PlayerMovement/Player/GuitarA/AnimationPlayer.play("Guitar1Action")
+	elif spawned_model and !sound.playing and animator.is_playing() and animator.current_animation == "playerAnimPack2/guitar":
+		animator.stop("playerAnimPack2/guitar")
 		
 
 func spawn_model():
@@ -53,16 +56,12 @@ func spawn_model():
 
 	# Add the model to the current scene (e.g., adding it as a child of the current node)
 	player.add_child(spawned_model)
+	guitar = $/root/world/PlayerMovement/Player/GuitarA
 	print(spawned_model.get_path())
-	spawned_model.global_position = player.global_position + Vector3(0, 1, 0.4)
-	spawned_model.scale = Vector3(2,2,2)
-	spawned_model.rotation_degrees.z = -45
-	spawned_model.rotation_degrees.y = -60
-	spawned_model.rotation_degrees.x = -20
 
 func delete_model():
 	# Check if spawned_model exists before trying to free it
-	var guitar = $/root/world/PlayerMovement/Player/Guitar1
+	
 
 	if guitar:
 		# remove instance of wheat
