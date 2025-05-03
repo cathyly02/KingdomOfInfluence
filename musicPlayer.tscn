@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://debmi7klmqaxj"]
+
+[ext_resource type="Script" uid="uid://cl8gfecbnej6x" path="res://musicPlayer.gd" id="1_n1t2e"]
+[ext_resource type="PackedScene" uid="uid://bdvkdv77fslji" path="res://addons/midi/ADSR.tscn" id="2_217h8"]
+[ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://addons/midi/MidiPlayer.tscn" id="3_wudjp"]
+
+[node name="musicPlayer" type="Node3D"]
+script = ExtResource("1_n1t2e")
+
+[node name="ADSR" parent="." instance=ExtResource("2_217h8")]
+
+[node name="MidiPlayer" parent="." instance=ExtResource("3_wudjp")]
+file = "res://assests/sound/oneNote.mid"
+playing = true
+soundfont = "res://assests/sound/SpanishClassicalGuitar-20190618.sf2"
+
+[connection signal="midi_event" from="MidiPlayer" to="." method="_on_midi_player_midi_event"]

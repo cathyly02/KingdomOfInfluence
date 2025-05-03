@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5c3y7bubmrhy"]
+[gd_scene load_steps=5 format=3 uid="uid://b5c3y7bubmrhy"]
 
 [ext_resource type="PackedScene" uid="uid://iw2v1qh10g6d" path="res://Scenes/noScriptPlayer.tscn" id="1_gt65o"]
 [ext_resource type="Texture2D" uid="uid://5aimhtv0q3ju" path="res://assests/blue.png" id="2_n64c0"]
 [ext_resource type="Script" uid="uid://bqh0iviil0bp0" path="res://Scenes/noteButton.gd" id="3_rh6da"]
+[ext_resource type="PackedScene" uid="uid://debmi7klmqaxj" path="res://musicPlayer.tscn" id="4_rh6da"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -50,3 +51,5 @@ transform = Transform3D(-0.25, 2.18557e-08, 0, -2.18557e-08, -0.25, 0, 0, 0, 0.2
 texture = ExtResource("2_n64c0")
 script = ExtResource("3_rh6da")
 input = "rightArrow"
+
+[node name="musicPlayer" parent="." instance=ExtResource("4_rh6da")]
