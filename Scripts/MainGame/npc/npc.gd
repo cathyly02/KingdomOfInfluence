@@ -65,7 +65,7 @@ func determineNPCDialog(npc):
 	match npc.name:
 		"DrunkardNPC":
 			randomDialog()
-		"FarmerBody":
+		"FarmerNPC":
 			print("We farming")
 		_:
 			print("TODO")
