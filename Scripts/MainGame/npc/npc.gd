@@ -5,6 +5,7 @@ extends Area3D
 @onready var player = get_node_or_null("/root/world/PlayerMovement/Player")
 @onready var camH= get_node_or_null("/root/world/PlayerMovement/CameraOrigin/Horizontal")
 var rotationOverride
+
 func _ready():
 	connect("body_entered", _on_body_entered)
 	connect("body_exited", _on_body_exited)
@@ -36,7 +37,7 @@ func _process(delta: float) -> void:
 			print("interacted")
 			get_node("/root/Global").current_npc = self
 			determineNPCDialog(Global.current_npc)
-			teleport_player_relative_to_object(Vector3(0, 0, -2))
+			#teleport_player_relative_to_object(Vector3(0, 0, -2))
 						# Shorten the camera arm
 			springArm.spring_length = 0
 			rotationOverride = true
@@ -67,8 +68,12 @@ func determineNPCDialog(npc):
 			randomDialog()
 		"FarmerNPC":
 			print("We farming")
+		"CaravanOwner":
+			print("CaravanOwner" + str(self.get_node("Quest").questLevel))
+			Dialogic.start("CaravanOwner" + str(self.get_node("Quest").questLevel))
 		_:
 			print("TODO")
+
 # Function to teleport player relative to target object
 func teleport_player_relative_to_object(offset: Vector3):
 	# Get the current position of the target object

@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var anim = $AnimationPlayer
 var last_position = Vector3.ZERO
+var interactable = true
 
 func _ready():
 	last_position = global_position
