@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://biollg7yrtped"]
+[gd_scene load_steps=5 format=3 uid="uid://biollg7yrtped"]
 
 [ext_resource type="PackedScene" uid="uid://bhts2eb4l6cid" path="res://testing/cow.glb" id="1_vcv6k"]
+[ext_resource type="Script" uid="uid://ra5ihy3up7uo" path="res://Scenes/Instances/random/cowAnim.gd" id="2_6do7t"]
 
 [sub_resource type="Animation" id="Animation_6do7t"]
 resource_name = "walk"
@@ -103,9 +104,10 @@ _data = {
 }
 
 [node name="cow2" instance=ExtResource("1_vcv6k")]
+script = ExtResource("2_6do7t")
 
 [node name="Skeleton3D" parent="cow" index="0"]
-bones/2/rotation = Quaternion(-0.209584, 4.27408e-08, -4.28815e-06, 0.977791)
+bones/2/rotation = Quaternion(-0.209584, 4.27409e-08, -4.28815e-06, 0.977791)
 bones/5/rotation = Quaternion(0.307042, -0.116297, -0.18172, 0.926919)
 bones/6/rotation = Quaternion(0.339498, -0.0336589, -0.0165876, 0.939858)
 bones/8/rotation = Quaternion(-0.546266, 0.250572, -0.206185, 0.772201)
@@ -115,9 +117,9 @@ bones/12/rotation = Quaternion(-0.231102, -0.0333597, 0.101141, 0.967083)
 bones/14/rotation = Quaternion(0.360301, 0.146549, 0.0346273, 0.920602)
 bones/15/rotation = Quaternion(0.00282507, 0.000575565, 0.149193, 0.988804)
 bones/16/rotation = Quaternion(-0.57232, 6.3519e-17, 1.65064e-17, 0.82003)
-bones/18/rotation = Quaternion(-0.442608, -3.99472e-25, -9.82786e-17, 0.896716)
+bones/18/rotation = Quaternion(-0.442608, -7.41959e-25, -9.82786e-17, 0.896715)
 bones/19/rotation = Quaternion(-0.0800316, 1.18827e-07, -9.5405e-09, 0.996792)
-bones/20/rotation = Quaternion(-0.0282438, -4.27355e-14, -6.73384e-09, 0.999601)
+bones/20/rotation = Quaternion(-0.0282438, -4.2739e-14, -6.73384e-09, 0.999601)
 
 [node name="AnimationPlayer" parent="." index="1"]
 libraries = {
