@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KingdomOfInfluence"
-run/main_scene="uid://6pipp6gbiul2"
+run/main_scene="uid://b5c3y7bubmrhy"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 

@@ -12,6 +12,5 @@ script = ExtResource("1_n1t2e")
 [node name="MidiPlayer" parent="." instance=ExtResource("3_wudjp")]
 file = "res://assests/sound/oneNote.mid"
 playing = true
-soundfont = "res://assests/sound/SpanishClassicalGuitar-20190618.sf2"
 
 [connection signal="midi_event" from="MidiPlayer" to="." method="_on_midi_player_midi_event"]

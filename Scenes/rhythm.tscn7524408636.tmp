@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5c3y7bubmrhy"]
+[gd_scene load_steps=7 format=3 uid="uid://b5c3y7bubmrhy"]
 
 [ext_resource type="PackedScene" uid="uid://iw2v1qh10g6d" path="res://Scenes/noScriptPlayer.tscn" id="1_gt65o"]
 [ext_resource type="Texture2D" uid="uid://5aimhtv0q3ju" path="res://assests/blue.png" id="2_n64c0"]
@@ -6,12 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://debmi7klmqaxj" path="res://musicPlayer.tscn" id="4_rh6da"]
 [ext_resource type="PackedScene" uid="uid://bdvkdv77fslji" path="res://addons/midi/ADSR.tscn" id="5_q274c"]
 [ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://addons/midi/MidiPlayer.tscn" id="6_5d0eo"]
-[ext_resource type="Script" uid="uid://uje4goybx15s" path="res://Scenes/score.gd" id="7_5d0eo"]
 
 [node name="rhythm" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 10)
+
+[node name="NoScriptPlayer" parent="." instance=ExtResource("1_gt65o")]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -8, -3, 1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.87171, 9.90244)
@@ -62,20 +64,3 @@ input = "rightArrow"
 file = "res://assests/sound/song.mid"
 playing = true
 soundfont = "res://assests/sound/SpanishClassicalGuitar-20190618.sf2"
-
-[node name="RandomStuff" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -3, 1)
-
-[node name="NoScriptPlayer" parent="RandomStuff" instance=ExtResource("1_gt65o")]
-transform = Transform3D(0.819152, 0, 0.573577, 0, 1, 0, -0.573577, 0, 0.819152, 0.9, 0, 1)
-
-[node name="Label3D" type="Label3D" parent="RandomStuff"]
-offset = Vector2(0, -150)
-text = "Score:
-"
-font_size = 150
-
-[node name="Label3D2" type="Label3D" parent="RandomStuff"]
-offset = Vector2(0, -300)
-font_size = 150
-script = ExtResource("7_5d0eo")
