@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bw45t3fds1d3u" path="res://Scenes/Instances/interactable.tscn" id="25_1vso6"]
 [ext_resource type="Script" uid="uid://b3g44u4e06wmy" path="res://Scripts/MainGame/modelGeneration.gd" id="26_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://dk1bitc3te2vf" path="res://Scenes/Instances/random/chicken.tscn" id="27_o2rbt"]
-[ext_resource type="PackedScene" uid="uid://biollg7yrtped" path="res://Scenes/Instances/random/cow_2.tscn" id="28_3ua1v"]
+[ext_resource type="PackedScene" uid="uid://ca1rjtvll5t23" path="res://Scenes/Instances/random/cow.tscn" id="28_3ua1v"]
 [ext_resource type="PackedScene" uid="uid://u1lrrxanvvo2" path="res://Scenes/Instances/random/sheep.tscn" id="30_3ua1v"]
 [ext_resource type="PackedScene" uid="uid://d08505dfobnlx" path="res://assests/GuitarA.glb" id="32_3ua1v"]
 [ext_resource type="PackedScene" uid="uid://c13mnd4u5ls50" path="res://Scenes/Instances/caravan.tscn" id="32_r0ikl"]
