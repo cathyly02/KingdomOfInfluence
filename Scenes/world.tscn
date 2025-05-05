@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://6pipp6gbiul2"]
+[gd_scene load_steps=47 format=4 uid="uid://6pipp6gbiul2"]
 
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://dm7xlcc2ossri" path="res://Scenes/Instances/moveablePlayer.tscn" id="2_5a7ea"]
@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://u1lrrxanvvo2" path="res://Scenes/Instances/random/sheep.tscn" id="30_3ua1v"]
 [ext_resource type="PackedScene" uid="uid://d08505dfobnlx" path="res://assests/GuitarA.glb" id="32_3ua1v"]
 [ext_resource type="PackedScene" uid="uid://c13mnd4u5ls50" path="res://Scenes/Instances/caravan.tscn" id="32_r0ikl"]
+[ext_resource type="Script" uid="uid://dywut3m5cfttb" path="res://Scenes/rhythmWorld.gd" id="33_r0ikl"]
 
 [sub_resource type="Environment" id="Environment_go701"]
 background_mode = 1
@@ -331,6 +332,15 @@ shape = SubResource("CylinderShape3D_t2t4p")
 
 [node name="allGrass" parent="Map" instance=ExtResource("9_7yui6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.030623, 0)
+
+[node name="campfire_logs3" parent="Map" instance=ExtResource("10_ikia7")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.95837, -0.212475, 28.6477)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Map/campfire_logs3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/campfire_logs3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00196156, -0.00152817, -0.00273085)
+shape = SubResource("CylinderShape3D_t2t4p")
 
 [node name="cornPlot" parent="." instance=ExtResource("10_c5t2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.2366, 0.231026, 4.59014)
@@ -824,3 +834,30 @@ object_scenes = Array[PackedScene]([ExtResource("28_3ua1v"), ExtResource("15_1vs
 
 [node name="Caravan" parent="." instance=ExtResource("32_r0ikl")]
 transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -23.2, 0.6, 11.7)
+
+[node name="muhroom2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15107, 0.6, -10)
+script = ExtResource("14_hgpy0")
+
+[node name="mushroomMesh" type="Node3D" parent="muhroom2"]
+
+[node name="mushroom_red2" parent="muhroom2/mushroomMesh" instance=ExtResource("16_t2t4p")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="muhroom2"]
+shape = SubResource("BoxShape3D_axeuq")
+
+[node name="Interactable" parent="muhroom2" instance=ExtResource("25_1vso6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+
+[node name="Rhythm" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.86564, 2.30068, 24.1462)
+collision_layer = 128
+collision_mask = 131
+script = ExtResource("33_r0ikl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Rhythm"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.390099, 0, 4.92286)
+shape = SubResource("BoxShape3D_axeuq")
+
+[node name="Interactable" parent="Rhythm" instance=ExtResource("25_1vso6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
