@@ -3315,7 +3315,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.935093, 0)
 shape = SubResource("CapsuleShape3D_xqsp7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../..")
+root_node = NodePath("../GeneralSkeleton")
 libraries = {
 &"playerAnimPack": SubResource("AnimationLibrary_1cojt"),
 &"playerAnimPack2": SubResource("AnimationLibrary_o2rbt")
