@@ -14,6 +14,7 @@ var inputDir
 
 func _ready():
 	cam.make_current()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
 	# rotate each based on rotationa nd pivot
