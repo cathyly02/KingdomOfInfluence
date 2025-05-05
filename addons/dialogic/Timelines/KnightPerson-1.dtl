@@ -1,0 +1,10 @@
+KnightPerson: Hey so... I really was hoping you'd follow my direction.
+KnightPerson: But you really didn't do that. It kind of upsets me.
+- You're really hard to follow actually.
+	KnightPerson: Jeez. That hurt my feelings. 
+	KnightPerson: This would be a great time to adjust your stats and make me not like you.
+- I'm sorry, can I try again?
+	KnightPerson: Hm...
+	KnightPerson: I guess you can try again. Though I'd like for you to do it right next time. 
+	- You can count on me!
+	do Global.restartNPCQuest()

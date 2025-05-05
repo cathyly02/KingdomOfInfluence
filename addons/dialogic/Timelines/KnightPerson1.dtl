@@ -1,0 +1,11 @@
+KnightPerson: ...Hey.
+- Hi!
+	KnightPerson: You know, you seem really nice.
+	KnightPerson: I have to do rounds of the kingdom, would you like to join me...?
+	- Sure, let's go!
+		KnightPerson: Thank you, please stay close to me as we walk.
+		do Global.startNPCQuest()
+	- Sorry, I'm a little busy right now
+		Oh. That's okay... I'll be here then in case you change your mind.
+- Ignore him
+	KnightPerson: ...alright.
