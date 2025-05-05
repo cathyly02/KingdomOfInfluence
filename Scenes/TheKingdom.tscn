@@ -3550,7 +3550,7 @@ bind/57/pose = Transform3D(-0.992789, 0.00958788, -0.119372, -0.119648, -0.03957
 albedo_texture = ExtResource("40_wy3wl")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kkcgx"]
-radius = 5.0
+radius = 6.0
 
 [node name="world" type="Node3D"]
 
@@ -4421,7 +4421,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 collision_layer = 2
 collision_mask = 131
 script = ExtResource("38_3np4l")
-move_speed = 10.0
+move_speed = 3.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/KnightFollow/Npc/CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_axeuq")
