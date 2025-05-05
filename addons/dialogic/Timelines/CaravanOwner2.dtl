@@ -1,1 +1,3 @@
-CaravanOwner: You found them! FOR THAT ILL GIVE  YOU RIDe TO KINGDOm. ill add that later. im taking a break. im gonna animate the cow.
+CaravanOwner: You found them! As a token of my gratitude, I can give you a ride back to the kingdom?
+- That sounds amazing.
+	do Global.endNPCQuest()
