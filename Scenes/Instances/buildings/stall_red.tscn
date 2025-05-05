@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmshelm50xwdh"]
+
+[ext_resource type="PackedScene" uid="uid://g3m6uwioutu0" path="res://assests/fantasy town models/stallRed.glb" id="1_lq0ot"]
+
+[node name="stallRed2" instance=ExtResource("1_lq0ot")]

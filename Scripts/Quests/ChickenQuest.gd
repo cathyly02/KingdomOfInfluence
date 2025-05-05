@@ -36,3 +36,5 @@ func endQuest() -> void:
 		finishQuest()
 		
 		# TODO: rewards, control what happens after quest is finished
+		# for chicken quest we go to kingdom scene
+		get_tree().change_scene_to_file("res://Scenes/TheKingdom.tscn")

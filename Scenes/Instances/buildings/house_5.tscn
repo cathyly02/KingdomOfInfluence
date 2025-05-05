@@ -17,9 +17,6 @@ transform = Transform3D(-3, 0, 4.52987e-07, 0, 3, 0, -4.52987e-07, 0, -3, 8.8, -
 [node name="wallDetailCross2" parent="." instance=ExtResource("2_173fu")]
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 4.76837e-07, -0.1, 2.3)
 
-[node name="wallDetailCross3" parent="." instance=ExtResource("2_173fu")]
-transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 2.8, -0.1, 2.3)
-
 [node name="wallDetailCross4" parent="." instance=ExtResource("2_173fu")]
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 5.8, -0.1, 2.3)
 
