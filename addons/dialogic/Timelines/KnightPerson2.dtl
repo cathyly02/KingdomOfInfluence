@@ -1,0 +1,6 @@
+KnightPerson: Hey... you stayed really close. Thank you for doing that. 
+- Of course!
+KnightPerson: You know... I am getting more comfortable with you.
+KnightPerson: This is probably a good time to increase your stats or something. But that system isn't in place yet so just... think about it.
+KnightPerson: What are stats? I don't know I just met you.
+do Global.endNPCQuest()

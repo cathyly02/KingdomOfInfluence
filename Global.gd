@@ -10,3 +10,7 @@ func startNPCQuest() -> void:
 func endNPCQuest() -> void:
 	# end npc quest
 	current_npc.get_node("Quest").endQuest()
+	
+func restartNPCQuest() -> void:
+	# restart npc quest after failure
+	current_npc.get_node("Quest").restartQuest()

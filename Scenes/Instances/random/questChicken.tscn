@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=4 uid="uid://ckh4ytqf8taxx"]
 
-[ext_resource type="Script" uid="uid://cnp0x6qkc4jwf" path="res://Scripts/MainGame/runAway.gd" id="1_dmep2"]
+[ext_resource type="Script" path="res://Scripts/MainGame/runAway.gd" id="1_dmep2"]
 [ext_resource type="Script" uid="uid://burfphmst4wl0" path="res://Scenes/Instances/random/chickenAnim.gd" id="2_5alxt"]
 [ext_resource type="PackedScene" uid="uid://bw45t3fds1d3u" path="res://Scenes/Instances/interactable.tscn" id="3_5alxt"]
-[ext_resource type="Script" path="res://Scenes/Instances/random/pickUpChicken.gd" id="3_dmep2"]
+[ext_resource type="Script" uid="uid://dablb8dy7c771" path="res://Scenes/Instances/random/pickUpChicken.gd" id="3_dmep2"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_pt3ps"]
 radius = 0.395169

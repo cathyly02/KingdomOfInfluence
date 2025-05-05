@@ -1,6 +1,6 @@
-[gd_scene load_steps=35 format=4 uid="uid://bbfmct66wsbge"]
+[gd_scene load_steps=34 format=4 uid="uid://bbfmct66wsbge"]
 
-[ext_resource type="Script" uid="uid://08mpmmm6hm4j" path="res://Scripts/MainGame/cutscene_world.gd" id="1_mqjme"]
+[ext_resource type="Script" path="res://Scripts/MainGame/cutscene_world.gd" id="1_mqjme"]
 [ext_resource type="MeshLibrary" uid="uid://bsrog21e6gtx" path="res://Scenes/Instances/natureTiles.tres" id="1_qj6t0"]
 [ext_resource type="PackedScene" uid="uid://cl8f4l3gcog6l" path="res://assests/nature/instances/tent_detailedClosed.glb" id="3_ay6kd"]
 [ext_resource type="PackedScene" uid="uid://ewc47bsrxwmq" path="res://assests/nature/instances/tent_detailedOpen.glb" id="4_nsgus"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://ddcugicxle0pt" path="res://assests/nature/ForestPack.tscn/all_tree_forest.tscn" id="8_jr5hp"]
 [ext_resource type="PackedScene" uid="uid://cdqsnehepsljo" path="res://assests/nature/GrassClusters/all_grass.tscn" id="9_otycv"]
 [ext_resource type="PackedScene" uid="uid://dfrpvmttprmjq" path="res://assests/nature/farm/corn_plot.tscn" id="10_8vnna"]
-[ext_resource type="PackedScene" path="res://Models/GLB_format/barrel.glb" id="11_pwi1m"]
 [ext_resource type="AudioStream" uid="uid://iw57otolqehs" path="res://assests/sound/lofi.mp3" id="12_r3s4w"]
 [ext_resource type="Script" uid="uid://cbktu5ak0u57n" path="res://Scripts/MainGame/player/guitar.gd" id="13_7taem"]
 [ext_resource type="AudioStream" uid="uid://dus6hfcbnxpht" path="res://assests/sound/chords/AmDown.mp3" id="14_wys5s"]
@@ -19,7 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://df3klhv1b5ssl" path="res://assests/sound/chords/CUp.mp3" id="17_r16ok"]
 [ext_resource type="AudioStream" uid="uid://xe8coiydk4l0" path="res://assests/sound/chords/GDown.mp3" id="18_4qssy"]
 [ext_resource type="AudioStream" uid="uid://bu0m7depg202l" path="res://assests/sound/chords/GUp.mp3" id="19_8crjh"]
-[ext_resource type="Script" uid="uid://duws8d8qy22nr" path="res://Scripts/MainGame/pick.gd" id="20_7ec0e"]
+[ext_resource type="Script" path="res://Scripts/MainGame/pick.gd" id="20_7ec0e"]
 [ext_resource type="PackedScene" uid="uid://c8qe846sih8f" path="res://assests/nature/instances/flower_redC.glb" id="21_fuxp3"]
 [ext_resource type="PackedScene" uid="uid://kjcr3mqood7g" path="res://assests/nature/instances/mushroom_red.glb" id="22_iph6j"]
 
@@ -211,6 +210,81 @@ bind/44/pose = Transform3D(-0.992803, 0.119373, 0.0095851, -0.119664, -0.992026,
 [sub_resource type="BoxShape3D" id="BoxShape3D_axeuq"]
 size = Vector3(1, 1.96924, 1.85791)
 
+[sub_resource type="Animation" id="Animation_ay6kd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TreeCamera1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.657066, 42.4183)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.821796, 1.05635, 9.94143)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TreeCamera1:current")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Camera3D:current")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TreeCamera1:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Camera3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_mqjme"]
 resource_name = "camera"
 length = 8.0
@@ -285,81 +359,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
-}
-
-[sub_resource type="Animation" id="Animation_ay6kd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TreeCamera1:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0.657066, 42.4183)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Camera3D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-0.821796, 1.05635, 9.94143)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("TreeCamera1:current")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Camera3D:current")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("TreeCamera1:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Camera3D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nsgus"]
@@ -869,8 +868,18 @@ transform = Transform3D(0.999693, -0.0215093, 0.0123139, 0.021334, 0.999672, 0.0
 mesh = SubResource("ArrayMesh_t2t4p")
 skin = SubResource("Skin_0pcbe")
 
-[node name="barrel2" parent="TheDrunk" instance=ExtResource("11_pwi1m")]
+[node name="barrel2" parent="TheDrunk"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.0327582, -1.19559, 9.89483)
+script = null
 
 [node name="Farmer" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.81556, 2.15196, 1.87635)
