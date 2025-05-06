@@ -6,6 +6,7 @@ extends CharacterBody3D
 @export var min_move_interval : float = 5.0
 @export var max_move_interval : float = 10.0
 @export var stationary: bool
+@export var interactable: bool
 @onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var navigation_agent = $NavigationAgent3D
 @onready var animator = $AnimationPlayer
