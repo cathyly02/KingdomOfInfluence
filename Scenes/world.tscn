@@ -3478,15 +3478,6 @@ shape = SubResource("CylinderShape3D_t2t4p")
 [node name="allGrass" parent="Map" instance=ExtResource("9_7yui6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.030623, 0)
 
-[node name="campfire_logs3" parent="Map" instance=ExtResource("10_ikia7")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -3.95837, -0.212475, 28.6477)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Map/campfire_logs3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/campfire_logs3/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00196156, -0.00152817, -0.00273085)
-shape = SubResource("CylinderShape3D_t2t4p")
-
 [node name="Caravan" parent="Map" instance=ExtResource("32_r0ikl")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -22.3402, 0.535111, 12.5261)
 
