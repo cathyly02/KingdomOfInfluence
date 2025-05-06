@@ -31,7 +31,6 @@ func _on_body_exited(body):
 func _process(delta: float) -> void:
 	# checks if inside body
 	if inside:
-		print("inside")
 		if Input.is_action_just_pressed("interact"):
 			print("interacted")
 			player.action = true

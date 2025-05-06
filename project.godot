@@ -26,6 +26,7 @@ GameManager="*res://Scenes/GameManager.tscn"
 
 directories/dch_directory={
 "CaravanOwner": "res://addons/dialogic/Timelines/CaravanOwner.dch",
+"Farmer": "res://addons/dialogic/Timelines/Farmer.dch",
 "KnightPerson": "res://addons/dialogic/Timelines/KnightPerson.dch",
 "VillageDrunk": "res://addons/dialogic/Timelines/VillageDrunk.dch",
 "dialog/VillageDrunk": "res://dialog/VillageDrunk.dch"
@@ -33,6 +34,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "CaravanOwner1": "res://addons/dialogic/Timelines/CaravanOwner1.dtl",
 "CaravanOwner2": "res://addons/dialogic/Timelines/CaravanOwner2.dtl",
+"Farmer": "res://addons/dialogic/Timelines/Farmer.dtl",
 "KnightPerson-1": "res://addons/dialogic/Timelines/KnightPerson-1.dtl",
 "KnightPerson1": "res://addons/dialogic/Timelines/KnightPerson1.dtl",
 "KnightPerson2": "res://addons/dialogic/Timelines/KnightPerson2.dtl",

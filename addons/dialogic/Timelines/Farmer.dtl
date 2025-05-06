@@ -1,0 +1,8 @@
+Farmer: Ugh these damn mushrooms
+- Is there anything I can do to help?
+	Farmer: Could you pick out some mushrooms for me?
+	- No
+		Farmer: Why did you offer to help...
+	- Sure!
+		do Global.startNPCQuest()
+- *Ignore him*
