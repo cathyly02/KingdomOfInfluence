@@ -1,0 +1,11 @@
+[gd_scene load_steps=6 format=3 uid="uid://boie84gun20ra"]
+
+[ext_resource type="Script" uid="uid://b3g44u4e06wmy" path="res://Scripts/MainGame/modelGeneration.gd" id="1_5qshy"]
+[ext_resource type="PackedScene" uid="uid://ca1rjtvll5t23" path="res://Scenes/Instances/random/cow.tscn" id="2_vkuwq"]
+[ext_resource type="PackedScene" uid="uid://dvbxtd5s2wt7p" path="res://Scenes/Instances/random/npc.tscn" id="3_md4pe"]
+[ext_resource type="PackedScene" uid="uid://u1lrrxanvvo2" path="res://Scenes/Instances/random/sheep.tscn" id="4_qq05i"]
+[ext_resource type="PackedScene" uid="uid://dk1bitc3te2vf" path="res://Scenes/Instances/random/chicken.tscn" id="5_tva6v"]
+
+[node name="ModelGeneration" type="Node3D"]
+script = ExtResource("1_5qshy")
+object_scenes = Array[PackedScene]([ExtResource("2_vkuwq"), ExtResource("3_md4pe"), ExtResource("4_qq05i"), ExtResource("5_tva6v")])

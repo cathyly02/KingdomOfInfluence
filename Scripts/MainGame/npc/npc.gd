@@ -68,7 +68,7 @@ func determineNPCDialog(npc):
 			randomDialog()
 		"Farmer":
 			print("Farmer" + str(self.get_node("Quest").questLevel))
-			Dialogic.start("Farmer")
+			Dialogic.start("Farmer" + str(self.get_node("Quest").questLevel))
 		"CaravanOwner":
 			print("CaravanOwner" + str(self.get_node("Quest").questLevel))
 			Dialogic.start("CaravanOwner" + str(self.get_node("Quest").questLevel))
