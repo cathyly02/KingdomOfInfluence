@@ -1,3 +1,4 @@
 CaravanOwner: You found them! As a token of my gratitude, I can give you a ride back to the kingdom?
 - That sounds amazing.
 	do Global.endNPCQuest()
+	[end_timeline]
