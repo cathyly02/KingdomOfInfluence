@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="KingdomOfInfluence"
-run/main_scene="uid://6pipp6gbiul2"
+run/main_scene="uid://vr6a8b8lx7jk"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
@@ -35,6 +35,8 @@ directories/dtl_directory={
 "CaravanOwner1": "res://addons/dialogic/Timelines/CaravanOwner1.dtl",
 "CaravanOwner2": "res://addons/dialogic/Timelines/CaravanOwner2.dtl",
 "Farmer": "res://addons/dialogic/Timelines/Farmer.dtl",
+"Farmer1": "res://addons/dialogic/Timelines/Farmer1.dtl",
+"Farmer2": "res://addons/dialogic/Timelines/Farmer2.dtl",
 "KnightPerson-1": "res://addons/dialogic/Timelines/KnightPerson-1.dtl",
 "KnightPerson1": "res://addons/dialogic/Timelines/KnightPerson1.dtl",
 "KnightPerson2": "res://addons/dialogic/Timelines/KnightPerson2.dtl",

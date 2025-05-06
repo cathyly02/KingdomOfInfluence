@@ -9,7 +9,7 @@ func _process(delta: float) -> void:
 		timer -= delta
 		if timer <= 0.0:
 			delete_model()
-			get_tree().change_scene_to_file("res://Scenes/world.tscn")
+			get_tree().change_scene_to_file("res://Scenes/TheKingdom.tscn")
 
 func _ready():
 	timer = duration
