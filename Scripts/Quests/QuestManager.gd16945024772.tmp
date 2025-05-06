@@ -73,16 +73,13 @@ func updatePercentage(number : int, max : int):
 	if not usePercentage or questStatus != QuestStatus.started:
 		return
 	
-	var true_percentage : float = 0.0
-	true_percentage = float(number) / float(max)
-	true_percentage *= 100
-	
-	true_percentage = round_to_decimals(true_percentage)
+	var true_percentage : double
+	true_percentage = number / max
+	print(str(number) + " " + str(max))
+	print(str(number / max))
 	questLabel.text = questString + " (" + str(true_percentage) + "%)"
 	
-func round_to_decimals(value: float) -> float:
-	var factor = pow(10, decimalPoint)
-	return round(value * factor) / factor
+	
 
 func failQuest():
 	questStatus = QuestStatus.failed

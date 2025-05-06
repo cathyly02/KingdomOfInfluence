@@ -13,6 +13,9 @@ var near_guard_points : int = 0
 var away_guard_points : int = 0
 var total_points : float = 0.0
 var total_score : float = 0.0
+var guard_delta : float = 0.0
+func _process(delta):
+	guard_delta = delta
 
 func _ready() -> void:
 	walk_locations.append(startingSpot)
@@ -34,11 +37,13 @@ func startQuest() -> void:
 			#print(str(corrected_location) + " : Index " + str(num)) DEBUG: prints walking locations
 			num += 1
 			while !movement_body.ready_for_next_direction:
-				await get_tree().create_timer(0.01).timeout 
-				if cyl.player_in_cylinder:
-					near_guard_points += 1
-				else:
-					away_guard_points += 1
+				await get_tree().create_timer(guard_delta).timeout 
+				if !GameManager.inventory_open:
+					if cyl.player_in_cylinder:
+						near_guard_points += 1
+					else:
+						away_guard_points += 1
+					changePercentage(near_guard_points, away_guard_points)
 		total_points = near_guard_points + away_guard_points
 		total_score = near_guard_points / total_points
 		if total_score > closeness_percentage:
@@ -49,6 +54,7 @@ func startQuest() -> void:
 			  "Points Away: " + str(away_guard_points) + "\n" +
 			  "Score: " + str(total_score))
 		quest_began = false
+		movement_body.rotate_to_angle(45)
 
 #func updateQuest() -> void:
 	#incrementCounter()
@@ -67,7 +73,10 @@ func endQuest() -> void:
 		finishQuest()
 		
 		# TODO: rewards, control what happens after quest is finished
-		
+
+func changePercentage(near_points : int, away_points : int) -> void:
+	var new_max = near_points + away_points
+	updatePercentage(near_points, new_max)
 
 func setQuestToFailed() -> void:
 	questLevel = -1

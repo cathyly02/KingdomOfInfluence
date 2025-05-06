@@ -4449,6 +4449,7 @@ walk_locations = Array[Vector3]([Vector3(7.1, 0, 45), Vector3(9.5, 0, 15), Vecto
 questString = "Follow the Guard!"
 reachedGoalText = "You followed the Guard!"
 requiredCount = 3
+usePercentage = true
 metadata/_custom_type_script = "uid://2r7popbhe1xu"
 
 [node name="GeneralSkeleton" type="Skeleton3D" parent="Map/KnightFollow/Npc/CharacterBody3D"]
