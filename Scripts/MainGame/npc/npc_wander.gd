@@ -16,6 +16,8 @@ var random_target_position : Vector3
 var is_random_move : bool = false
 var random_timer : float = 0.0
 var is_stopped : bool = false
+var quest_movement : bool = false
+var quest_delta = 0
 
 func _ready():
 	set_random_target_position()
@@ -40,6 +42,9 @@ func _process(delta):
 		random_timer -= delta
 		if random_timer <= 0:
 			switch_movement_mode()
+	elif (quest_movement):
+		quest_delta = delta
+		
 #checks if player is in front of npc
 func player_is_in_front()-> bool:
 	var to_player = (player.global_position - global_position).normalized()
@@ -59,7 +64,7 @@ func _input(event):
 		is_stopped = true
 		animator.play("playerAnimPack/idle")
 	elif event.is_action_pressed("End Dialog") and player_is_in_front():
-			is_stopped = false
+		is_stopped = false
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

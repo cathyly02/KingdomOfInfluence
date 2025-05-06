@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cvhk3yxgsytix" path="res://Scripts/Quests/ChickenQuest.gd" id="2_ba5cm"]
 [ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scripts/MainGame/npc/npc.gd" id="2_d86eg"]
 [ext_resource type="PackedScene" uid="uid://ckh4ytqf8taxx" path="res://Scenes/Instances/random/questChicken.tscn" id="4_u3sr6"]
+[ext_resource type="Texture2D" uid="uid://cxabsq2joxobp" path="res://assests/Skins/survivorFemaleA.png" id="5_p5kqq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4spci"]
 resource_name = "wood"
@@ -3481,11 +3482,8 @@ bind/57/name = &"RightToes_end"
 bind/57/bone = -1
 bind/57/pose = Transform3D(-0.992789, 0.00958788, -0.119372, -0.119648, -0.0395766, 0.992024, 0.00479378, 0.99917, 0.0404368, -0.340612, -0.341564, -0.0149777)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u3sr6"]
-load_path = "res://.godot/imported/skaterMaleA.png-7db4490734f3d3fc1ab80b9565838add.s3tc.ctex"
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5kqq"]
-albedo_texture = SubResource("CompressedTexture2D_u3sr6")
+albedo_texture = ExtResource("5_p5kqq")
 
 [node name="Caravan" type="Node3D"]
 

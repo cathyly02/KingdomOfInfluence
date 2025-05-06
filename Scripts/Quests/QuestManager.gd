@@ -9,6 +9,7 @@ class_name QuestManager extends Node3D
 # enable if need to keep a count (like chickens collected
 @export var useCounter: bool = false 
 @export var requiredCount: int = 0
+@export var retryable : bool = true # if false, quest status wont be reset upon failure
 var currentCount: int = 0
 
 var questLabel: Label
@@ -19,7 +20,8 @@ enum QuestStatus
 	available,
 	started,
 	reachedGoal,
-	finished
+	finished, 
+	failed
 }
 
 @export var questStatus: QuestStatus = QuestStatus.available
@@ -61,3 +63,12 @@ func incrementCounter():
 	
 	if (currentCount < requiredCount):
 		questLabel.text = questString + " (" + str(currentCount) + "/" + str(requiredCount) + ")"
+		
+func failQuest():
+	questStatus = QuestStatus.failed
+
+func restartQuestToAvailable():
+	questStatus = QuestStatus.available
+	
+
+	

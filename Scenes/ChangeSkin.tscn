@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b7h8kdk1r7tp6" path="res://Scripts/UICustomScene/ChangeSkin.gd" id="2_abk0b"]
 [ext_resource type="Script" uid="uid://kfg4d78ewmth" path="res://Scripts/UICustomScene/NextButton/ToPersonalityUI.gd" id="3_2ms1e"]
 [ext_resource type="Script" uid="uid://bbj2xqkl6cra3" path="res://Scripts/UICustomScene/NextButton/ToKingdomScene.gd" id="4_abk0b"]
-[ext_resource type="Script" uid="uid://cn0g7uoh6ge43" path="res://Scripts/UICustomScene/backCharCustom.gd" id="7_01lhc"]
+[ext_resource type="Script" path="res://Scenes/backCharCustom.gd" id="7_01lhc"]
 [ext_resource type="Script" uid="uid://v40kjlqp5w46" path="res://Scripts/SliderScripts/firstslider.gd" id="9_c6ofp"]
 [ext_resource type="Script" uid="uid://dysqcdidixwm6" path="res://Scripts/SliderScripts/secondslider.gd" id="10_if7nu"]
 [ext_resource type="Script" uid="uid://de75la4cpcgak" path="res://Scripts/SliderScripts/thirdslider.gd" id="11_2ecpr"]
