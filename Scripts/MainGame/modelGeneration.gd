@@ -42,4 +42,4 @@ func _ready():
 		# Make a new one every time
 		x = randf_range(-world_size.x / 2, world_size.x / 2)
 		z = randf_range(-world_size.z / 2, world_size.z / 2)
-		instance.global_position = Vector3(x, spawn_height, z)
+		instance.global_position = global_position + Vector3(x, spawn_height, z)

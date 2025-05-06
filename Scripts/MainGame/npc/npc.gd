@@ -32,12 +32,14 @@ func _on_body_exited(body):
 		print(body.name, " is not in front of npc")
 	
 func _process(delta: float) -> void:
+
+
 	if inside:
 		if Input.is_action_just_pressed("interact"):
 			print("interacted")
 			get_node("/root/Global").current_npc = self
 			determineNPCDialog(Global.current_npc)
-			#teleport_player_relative_to_object(Vector3(0, 0, -2))
+			'''#teleport_player_relative_to_object(Vector3(0, 0, -2))
 						# Shorten the camera arm
 			springArm.spring_length = 0
 			rotationOverride = true
@@ -61,7 +63,7 @@ func _process(delta: float) -> void:
 
 	else:
 		rotationOverride = false	
-			
+			'''
 func determineNPCDialog(npc):
 	match npc.name:
 		"DrunkardNPC":

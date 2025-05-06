@@ -52,7 +52,7 @@ func _process(delta):
 	camOrigin.global_position = Vector3(global_position.x,global_position.y + 1.5, global_position.z)
 	
 	# Declare the variable FIRST before any conditional blocks
-	var rotationOverride = false
+	'''var rotationOverride = false
 	
 	# Then check conditions and modify it if needed
 	if npc and npc.has_method("get") and npc.get("rotationOverride") != null:
@@ -62,7 +62,7 @@ func _process(delta):
 	if springArm.spring_length <= 0 and not rotationOverride:
 		var camera_yaw = camH.rotation.y
 		rotation.y = (135 + camera_yaw)
-		
+		'''
 
 	
 func _physics_process(delta):
