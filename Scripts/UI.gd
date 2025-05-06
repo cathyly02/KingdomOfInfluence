@@ -5,7 +5,9 @@ var inventory_open = false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	print(get_tree().current_scene.name)
+	if (get_tree().current_scene.name != "Menu"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Inventory"):

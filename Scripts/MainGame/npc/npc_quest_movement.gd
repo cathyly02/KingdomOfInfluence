@@ -22,8 +22,9 @@ func _process(delta):
 	quest_delta = delta
 	if currently_moving:
 		animator.play("playerAnimPack2/walk")
-		rotate_towards(target_position, delta)
+		rotate_towards(Vector3(velocity.x, 0, velocity.z), delta)
 		move_and_slide()
+		apply_velocity(target_position)
 		if global_position.distance_to(target_position) < target_pos_forgiveness:
 			currently_moving = false
 			ready_for_next_direction = true
@@ -31,7 +32,11 @@ func _process(delta):
 	else:
 		animator.play("playerAnimPack/idle")
 		set_velocity(Vector3.ZERO)
-		
+
+func _on_body_entered(body):
+	if body == player:
+		print("hey.")
+
 #checks if player is in front of npc
 func player_is_in_front()-> bool:
 	var to_player = (player.global_position - global_position).normalized()
@@ -47,7 +52,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.y = 0  # Reset vertical speed when on the floor
 
-func rotate_towards(direction: Vector3, delta: float) -> void:
+func rotate_towards(direction: Vector3, delta: float) -> void:  # direction is a Vector3 on the body's velocity
 	# Only rotate if there is movement
 	if direction.length() > 0:
 		# Calculate the target rotation using atan2
@@ -58,13 +63,17 @@ func rotate_towards(direction: Vector3, delta: float) -> void:
 
 func move_to_position(destination: Vector3) -> void:
 	ready_for_next_direction = false
-	var direction = (destination - global_position).normalized()
-	
-	velocity.x = direction.x * move_speed
-	velocity.z = direction.z * move_speed
+	apply_velocity(destination)
 	
 	# start moving
 	target_position = destination
 	currently_moving = true
 	
+func apply_velocity(destination: Vector3) -> void:
+	var direction = (destination - global_position).normalized()
 	
+	velocity.x = direction.x * move_speed
+	velocity.z = direction.z * move_speed
+	
+func rotate_to_angle(angle_degrees: int) -> void:
+	rotation.y = angle_degrees

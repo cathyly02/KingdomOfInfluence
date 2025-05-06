@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=4 uid="uid://c13mnd4u5ls50"]
+[gd_scene load_steps=38 format=4 uid="uid://c13mnd4u5ls50"]
 
 [ext_resource type="Script" uid="uid://cp1bluqjjl8pe" path="res://Scripts/MainGame/npc/npc_wander.gd" id="1_p5kqq"]
 [ext_resource type="Script" uid="uid://cvhk3yxgsytix" path="res://Scripts/Quests/ChickenQuest.gd" id="2_ba5cm"]
 [ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scripts/MainGame/npc/npc.gd" id="2_d86eg"]
 [ext_resource type="PackedScene" uid="uid://ckh4ytqf8taxx" path="res://Scenes/Instances/random/questChicken.tscn" id="4_u3sr6"]
 [ext_resource type="Texture2D" uid="uid://cxabsq2joxobp" path="res://assests/Skins/survivorFemaleA.png" id="5_p5kqq"]
+[ext_resource type="PackedScene" uid="uid://bw45t3fds1d3u" path="res://Scenes/Instances/interactable.tscn" id="6_d86eg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4spci"]
 resource_name = "wood"
@@ -3525,6 +3526,7 @@ collision_layer = 2
 collision_mask = 131
 script = ExtResource("1_p5kqq")
 stationary = true
+interactable = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Npc/CharacterBody3D"]
 shape = SubResource("CapsuleShape3D_axeuq")
@@ -3972,3 +3974,6 @@ bones/57/scale = Vector3(1.00002, 1, 1)
 mesh = SubResource("ArrayMesh_rtjl6")
 skin = SubResource("Skin_tdn8e")
 surface_material_override/0 = SubResource("StandardMaterial3D_p5kqq")
+
+[node name="Interactable" parent="Npc/CharacterBody3D" instance=ExtResource("6_d86eg")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, -0.4)

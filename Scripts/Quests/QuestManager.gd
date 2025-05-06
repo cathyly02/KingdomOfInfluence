@@ -10,6 +10,9 @@ class_name QuestManager extends Node3D
 @export var useCounter: bool = false 
 @export var requiredCount: int = 0
 @export var retryable : bool = true # if false, quest status wont be reset upon failure
+
+@export var usePercentage: bool = false
+@export var decimalPoint: int = 1
 var currentCount: int = 0
 
 var questLabel: Label
@@ -39,6 +42,8 @@ func newQuest():
 	
 	if useCounter:
 		questLabel.text = questString + " (0/" + str(requiredCount) + ")"
+	elif usePercentage:
+		questLabel.text = questString + " (" + "0" + "%)"
 	else:
 		questLabel.text = questString
 
@@ -63,7 +68,22 @@ func incrementCounter():
 	
 	if (currentCount < requiredCount):
 		questLabel.text = questString + " (" + str(currentCount) + "/" + str(requiredCount) + ")"
-		
+
+func updatePercentage(number : int, max : int):
+	if not usePercentage or questStatus != QuestStatus.started:
+		return
+	
+	var true_percentage : float = 0.0
+	true_percentage = float(number) / float(max)
+	true_percentage *= 100
+	
+	true_percentage = round_to_decimals(true_percentage)
+	questLabel.text = questString + " (" + str(true_percentage) + "%)"
+	
+func round_to_decimals(value: float) -> float:
+	var factor = pow(10, decimalPoint)
+	return round(value * factor) / factor
+
 func failQuest():
 	questStatus = QuestStatus.failed
 
