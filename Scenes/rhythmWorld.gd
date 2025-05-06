@@ -3,7 +3,7 @@ extends Area3D
 #check if player is inside area
 var inside = false
 var bodyName
-var interactable = false
+var interactable = true
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))
 	connect("body_exited", Callable(self, "_on_body_exited"))
