@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://gewaiuadmha6"]
+
+[ext_resource type="Script" uid="uid://b348xuraeuxa2" path="res://Suika/Scripts/fruitscript1.gd" id="1_3262c"]
+[ext_resource type="Texture2D" uid="uid://dgr2dblkjogwk" path="res://Suika/Resources/fruits.png" id="1_o20pv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6yr1"]
+atlas = ExtResource("1_o20pv")
+region = Rect2(134, 136, 118, 118)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yd1tv"]
+radius = 42.0119
+
+[node name="RBF1" type="RigidBody2D"]
+script = ExtResource("1_3262c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_t6yr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yd1tv")
