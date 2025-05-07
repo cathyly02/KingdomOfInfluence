@@ -3,6 +3,8 @@ extends Area3D
 # InteractableItem.gd
 @export var useInteractFunction: bool
 @export var interfaceFunc: Node
+@export var interactString: String
+
 var player_in_area := false
 #static var interacted_this_frame := false
 
@@ -11,6 +13,7 @@ var player_in_area := false
 func _ready():
 	self.body_entered.connect(_on_body_entered)
 	self.body_exited.connect(_on_body_exited)
+	interact_label.get_child(0).text = interactString
 
 func _process(delta):
 	if camera and interact_label:
@@ -26,6 +29,7 @@ func _on_body_entered(body):
 	var parentNode = get_parent()
 	if parentNode.interactable == true:
 		if body.name == "Player":
+			#print("I Am Here")
 			interact_label.visible = true
 
 func _on_body_exited(body):
