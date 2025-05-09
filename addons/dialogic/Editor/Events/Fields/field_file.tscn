@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://7mvxuaulctcq"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Editor/Events/Fields/field_file.gd" id="1_0grcf"]
+[ext_resource type="Script" uid="uid://dtus576v0kd5e" path="res://addons/dialogic/Editor/Events/Fields/field_file.gd" id="1_0grcf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tr837"]
 

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bekba3h2f3td7"]
+
+[ext_resource type="PackedScene" uid="uid://d13qhhapcm6w0" path="res://Assets/Models/Nature Kit/cliff_blockSlope_rock.glb" id="1_e5w5h"]
+
+[node name="cliff_blockSlope_rock2" instance=ExtResource("1_e5w5h")]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdn3enrs1eqj1"]
+
+[ext_resource type="PackedScene" uid="uid://cq5lmdac4y0n8" path="res://Assets/Models/Nature Kit/tree_pineTallA.glb" id="1_rmkdv"]
+
+[node name="tree_pineTallA2" instance=ExtResource("1_rmkdv")]
+
+[node name="tmpParent" parent="." index="0"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)

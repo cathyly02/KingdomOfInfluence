@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhno1w77l247p"]
+
+[ext_resource type="PackedScene" uid="uid://cix5emlt71kl2" path="res://Assets/Models/Fantasy Town Kit/wallDoor.glb" id="1_3hyic"]
+[ext_resource type="PackedScene" uid="uid://bdlqp5rxo4c1h" path="res://Assets/Models/Fantasy Town Kit/wall.glb" id="2_813fo"]
+[ext_resource type="PackedScene" uid="uid://wwofom5e4kkp" path="res://Assets/Models/Fantasy Town Kit/roofHighGable.glb" id="3_3ervl"]
+
+[node name="house8" type="Node3D"]
+
+[node name="wallDoor2" parent="." instance=ExtResource("1_3hyic")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.5, 0)
+
+[node name="wall2" parent="." instance=ExtResource("2_813fo")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 0.5, 0)
+
+[node name="wall3" parent="." instance=ExtResource("2_813fo")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 0.5, -2.7)
+
+[node name="wall4" parent="." instance=ExtResource("2_813fo")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 2.7, 0.5, 0)
+
+[node name="roofHighGable2" parent="." instance=ExtResource("3_3ervl")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 3.5, 0)

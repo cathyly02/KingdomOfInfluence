@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://debmi7klmqaxj"]
+
+[ext_resource type="Script" uid="uid://cl8gfecbnej6x" path="res://Scripts/MainGame/musicPlayer.gd" id="1_l8v3f"]
+[ext_resource type="PackedScene" uid="uid://bdvkdv77fslji" path="res://addons/midi/ADSR.tscn" id="2_fk8mh"]
+[ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://addons/midi/MidiPlayer.tscn" id="3_g36yq"]
+
+[node name="musicPlayer" type="Node3D"]
+script = ExtResource("1_l8v3f")
+
+[node name="ADSR" parent="." instance=ExtResource("2_fk8mh")]
+
+[node name="MidiPlayer" parent="." instance=ExtResource("3_g36yq")]
+file = "res://assests/sound/oneNote.mid"
+playing = true
+
+[connection signal="midi_event" from="MidiPlayer" to="." method="_on_midi_player_midi_event"]

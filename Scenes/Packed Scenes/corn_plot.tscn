@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfrpvmttprmjq"]
+
+[ext_resource type="PackedScene" uid="uid://dfyne0msxr804" path="res://Assets/Models/Nature Kit/crops_dirtDoubleRow.glb" id="1_u705l"]
+[ext_resource type="PackedScene" uid="uid://dn6rfuv14orhi" path="res://Assets/Models/Nature Kit/crops_dirtDoubleRowEnd.glb" id="2_h8awn"]
+[ext_resource type="PackedScene" uid="uid://3oeutluulc8q" path="res://Scenes/Packed Scenes/full_grown_corn.tscn" id="3_uq3ff"]
+
+[node name="cornPlot" type="Node3D"]
+
+[node name="crops_dirtDoubleRow2" parent="." instance=ExtResource("1_u705l")]
+transform = Transform3D(-2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 0.949574, -1.31339, 0.547789)
+
+[node name="crops_dirtDoubleRowEnd2" parent="." instance=ExtResource("2_h8awn")]
+transform = Transform3D(-2.18557e-07, 0, -5, 0, 5, 0, 5, 0, -2.18557e-07, 0.95158, -1.313, -4.32305)
+
+[node name="crops_dirtDoubleRowEnd5" parent="." instance=ExtResource("2_h8awn")]
+transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, 0.964802, -1.313, 5.05894)
+
+[node name="fullGrownCorn" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89585, -1.30869, -3.71012)
+
+[node name="fullGrownCorn2" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21384, -1.30869, -1.65749)
+
+[node name="fullGrownCorn3" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8775, -1.30869, 0.46435)
+
+[node name="fullGrownCorn4" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22945, -1.30869, 2.47013)
+
+[node name="fullGrownCorn5" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54207, -1.30869, 4.50749)
+
+[node name="fullGrownCorn6" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.606606, -1.30869, -3.71012)
+
+[node name="fullGrownCorn7" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.288624, -1.30869, -1.65749)
+
+[node name="fullGrownCorn8" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624962, -1.30869, 0.46435)
+
+[node name="fullGrownCorn9" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.273006, -1.30869, 2.47013)
+
+[node name="fullGrownCorn10" parent="." instance=ExtResource("3_uq3ff")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.039608, -1.30869, 4.50749)

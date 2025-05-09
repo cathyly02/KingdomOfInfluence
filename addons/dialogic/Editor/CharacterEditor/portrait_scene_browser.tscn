@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://b1wn8r84uh11b"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Editor/CharacterEditor/portrait_scene_browser.gd" id="1_an6nc"]
+[ext_resource type="Script" uid="uid://dfvr0t2ent22b" path="res://addons/dialogic/Editor/CharacterEditor/portrait_scene_browser.gd" id="1_an6nc"]
 
 [sub_resource type="Gradient" id="Gradient_0o1u0"]
 colors = PackedColorArray(0.100572, 0.303996, 0.476999, 1, 0.296448, 0.231485, 0.52887, 1)

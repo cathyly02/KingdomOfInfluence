@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://jggiocmc54k0"]
+
+[ext_resource type="PackedScene" uid="uid://bposkabs1syi" path="res://Assets/Models/Fantasy Town Kit/wallWoodWindowSmall.glb" id="1_0afns"]
+[ext_resource type="PackedScene" uid="uid://qv1lfgjpvd2t" path="res://Assets/Models/Fantasy Town Kit/roofHighWindow.glb" id="2_puylq"]
+[ext_resource type="PackedScene" uid="uid://bdlqp5rxo4c1h" path="res://Assets/Models/Fantasy Town Kit/wall.glb" id="3_20j87"]
+[ext_resource type="PackedScene" uid="uid://cix5emlt71kl2" path="res://Assets/Models/Fantasy Town Kit/wallDoor.glb" id="4_8rbt6"]
+[ext_resource type="PackedScene" uid="uid://b181ydqf36avg" path="res://Assets/Models/Fantasy Town Kit/wallWood.glb" id="5_24227"]
+
+[node name="house2" type="Node3D"]
+
+[node name="wallWoodWindowSmall2" parent="." instance=ExtResource("1_0afns")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.1, 3.5, 3.1)
+
+[node name="wallWoodWindowSmall3" parent="." instance=ExtResource("1_0afns")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.1, 3.5, 6.1)
+
+[node name="roofHighWindow2" parent="." instance=ExtResource("2_puylq")]
+transform = Transform3D(1.78814e-07, 0, -3, 0, 3, 0, 3, 0, 1.78814e-07, -0.2, 6.5, 6.1)
+
+[node name="roofHighWindow3" parent="." instance=ExtResource("2_puylq")]
+transform = Transform3D(-4.41082e-07, 0, 3, 0, 3, 0, -3, 0, -4.41082e-07, -0.2, 6.5, 3.1)
+
+[node name="wall2" parent="." instance=ExtResource("3_20j87")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 0.5, 6)
+
+[node name="wall4" parent="." instance=ExtResource("3_20j87")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 0.5, 0.5)
+
+[node name="wallDoor2" parent="." instance=ExtResource("4_8rbt6")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.5, 6.1)
+
+[node name="wallDoor3" parent="." instance=ExtResource("4_8rbt6")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0.5, 3.1)
+
+[node name="wallWood2" parent="." instance=ExtResource("5_24227")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 3.5, 6.2)
+
+[node name="wallWood3" parent="." instance=ExtResource("5_24227")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0, 3.5, 0.3)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbpkta2tjsqim"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.gd" id="1_x8t45"]
+[ext_resource type="Script" uid="uid://bmtmd232bbqsm" path="res://addons/dialogic/Editor/Common/hint_tooltip_icon.gd" id="1_x8t45"]
 
 [sub_resource type="Image" id="Image_eiyxd"]
 data = {

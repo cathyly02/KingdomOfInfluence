@@ -1,0 +1,276 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgj1yjdo56hv2"]
+
+[ext_resource type="PackedScene" uid="uid://cyh5ty15w04nk" path="res://Scenes/People/playerNoCamera.tscn" id="1_obnvj"]
+[ext_resource type="Script" uid="uid://b7h8kdk1r7tp6" path="res://Scripts/UI/UICustomizeScene/ChangeSkin.gd" id="2_abk0b"]
+[ext_resource type="Script" uid="uid://kfg4d78ewmth" path="res://Scripts/UI/UICustomizeScene/NextButton/ToPersonalityUI.gd" id="3_2ms1e"]
+[ext_resource type="Script" uid="uid://bbj2xqkl6cra3" path="res://Scripts/UI/UICustomizeScene/NextButton/ToKingdomScene.gd" id="4_abk0b"]
+[ext_resource type="Script" path="res://Scenes/backCharCustom.gd" id="7_01lhc"]
+[ext_resource type="Script" uid="uid://v40kjlqp5w46" path="res://Scripts/UI/SliderScripts/firstslider.gd" id="9_c6ofp"]
+[ext_resource type="Script" uid="uid://dysqcdidixwm6" path="res://Scripts/UI/SliderScripts/secondslider.gd" id="10_if7nu"]
+[ext_resource type="Script" uid="uid://de75la4cpcgak" path="res://Scripts/UI/SliderScripts/thirdslider.gd" id="11_2ecpr"]
+[ext_resource type="Script" uid="uid://q6cfgjocm4fm" path="res://Scripts/UI/SliderScripts/fourthslider.gd" id="12_8chir"]
+
+[sub_resource type="GDScript" id="GDScript_6osvb"]
+script/source = "extends Camera3D
+
+func _ready():
+	current = true  # Ensure this camera is active
+"
+
+[node name="ChangeSkin" type="Node"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Player" parent="Node3D" instance=ExtResource("1_obnvj")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -1, 0.008, 0.017)
+script = ExtResource("2_abk0b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Node3D"]
+
+[node name="UI" type="Control" parent="Node3D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CharacterCustomization" type="Control" parent="Node3D/CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Node3D/CanvasLayer/UI/CharacterCustomization"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -233.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(1.03829, 1.00164)
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Enter Name"
+max_length = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "<"
+
+[node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Skin Choice"
+
+[node name="Button2" type="Button" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = ">"
+
+[node name="CharButton2" type="Button" parent="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+action_mode = 0
+text = "Next"
+script = ExtResource("3_2ms1e")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Node3D/CanvasLayer/UI/CharacterCustomization"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.75
+anchor_bottom = 1.0
+offset_right = 8.0
+grow_vertical = 2
+
+[node name="RotateButton" type="Button" parent="Node3D/CanvasLayer/UI/CharacterCustomization/AspectRatioContainer"]
+light_mask = 0
+visibility_layer = 0
+layout_mode = 2
+size_flags_stretch_ratio = 5.16
+
+[node name="PersonalityCustomization" type="Control" parent="Node3D/CanvasLayer/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 100.0
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="BackCharButton" type="Button" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+action_mode = 0
+text = "Back"
+script = ExtResource("7_01lhc")
+
+[node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Personalities"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Extrovert"
+
+[node name="HSlider" type="HSlider" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("9_c6ofp")
+
+[node name="Label2" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Introvert"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Sensing"
+
+[node name="HSlider" type="HSlider" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("10_if7nu")
+
+[node name="Label2" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Intuition"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Thinking"
+
+[node name="HSlider" type="HSlider" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("11_2ecpr")
+
+[node name="Label2" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "Feeling"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Judging"
+
+[node name="HSlider" type="HSlider" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+script = ExtResource("12_8chir")
+
+[node name="Label2" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "Perceiving"
+
+[node name="PersonalityButton" type="Button" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+action_mode = 0
+text = "Next"
+script = ExtResource("4_abk0b")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label2" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Hobbies"
+
+[node name="CheckBox" type="CheckBox" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Music"
+
+[node name="CheckBox2" type="CheckBox" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Gardening"
+
+[node name="CheckBox3" type="CheckBox" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Building"
+
+[node name="CheckBox4" type="CheckBox" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Reading"
+
+[node name="CheckBox5" type="CheckBox" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+text = "Art"
+
+[node name="KingdomChoice" type="Control" parent="Node3D/CanvasLayer/UI"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48042, 1.78516, 2.77394)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00749302, 1.04837, 3.54811)
+current = true
+script = SubResource("GDScript_6osvb")
+
+[connection signal="pressed" from="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/HBoxContainer/Button" to="Node3D/Player" method="leftChoice"]
+[connection signal="pressed" from="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="Node3D/Player" method="rightChoice"]
+[connection signal="pressed" from="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/CharButton2" to="Node3D/CanvasLayer/UI/CharacterCustomization/MarginContainer/VBoxContainer/CharButton2" method="personalityUI"]
+[connection signal="mouse_entered" from="Node3D/CanvasLayer/UI/CharacterCustomization/AspectRatioContainer/RotateButton" to="Node3D/Player" method="mouseEntered"]
+[connection signal="mouse_exited" from="Node3D/CanvasLayer/UI/CharacterCustomization/AspectRatioContainer/RotateButton" to="Node3D/Player" method="mouseExited"]
+[connection signal="pressed" from="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/BackCharButton" to="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/BackCharButton" method="backCustomCharUI"]
+[connection signal="changeFirstSlider" from="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer/HSlider" to="Node3D/Player" method="_on_h_slider_change_first_slider"]
+[connection signal="changeSecondSlider" from="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer2/HSlider" to="Node3D/Player" method="_on_h_slider_change_second_slider"]
+[connection signal="changeThirdSlider" from="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer3/HSlider" to="Node3D/Player" method="_on_h_slider_change_third_slider"]
+[connection signal="changeFourthSlider" from="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/HBoxContainer4/HSlider" to="Node3D/Player" method="_on_h_slider_change_fourth_slider"]
+[connection signal="pressed" from="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/PersonalityButton" to="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer/PersonalityButton" method="kingdomUI"]

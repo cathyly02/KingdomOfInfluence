@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dpwhshre1n4t6"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.gd" id="1_b07gq"]
+[ext_resource type="Script" uid="uid://dw7msvgrsp1q1" path="res://addons/dialogic/Editor/Events/Fields/field_options_dynamic.gd" id="1_b07gq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmt5n"]
 
