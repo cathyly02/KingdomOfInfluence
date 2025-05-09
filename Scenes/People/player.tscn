@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm7xlcc2ossri"]
+
+[ext_resource type="PackedScene" uid="uid://cyh5ty15w04nk" path="res://Scenes/People/playerNoCamera.tscn" id="1_rfdye"]
+[ext_resource type="Script" uid="uid://bgfldskcv238f" path="res://Scripts/MainGame/Player/camMovement.gd" id="2_0qihj"]
+
+[node name="PlayerMovement" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_rfdye")]
+
+[node name="CameraOrigin" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+script = ExtResource("2_0qihj")
+
+[node name="Horizontal" type="Node3D" parent="CameraOrigin"]
+
+[node name="Vertical" type="Node3D" parent="CameraOrigin/Horizontal"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraOrigin/Horizontal/Vertical"]
+collision_mask = 128
+spring_length = 5.0
+margin = 0.5
+
+[node name="Camera3D" type="Camera3D" parent="CameraOrigin/Horizontal/Vertical/SpringArm3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+current = true
+fov = 80.0

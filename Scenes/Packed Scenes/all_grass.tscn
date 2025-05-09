@@ -1,0 +1,110 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdqsnehepsljo"]
+
+[ext_resource type="PackedScene" uid="uid://b8caq5qeplk11" path="res://Scenes/Packed Scenes/grass.tscn" id="1_csy7a"]
+
+[node name="allGrass" type="Node3D"]
+
+[node name="grass" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.36491, -1.60235, 0.497387)
+
+[node name="grass2" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77197, -1.60235, -6.60235)
+
+[node name="grass5" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.12277, 0, 0.992435, 0, 1, 0, -0.992435, 0, 0.12277, -10.8036, -1.60235, 4.97901)
+
+[node name="grass6" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.12277, 0, 0.992435, 0, 1, 0, -0.992435, 0, 0.12277, 12.5783, -1.60235, 4.97901)
+
+[node name="grass7" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.12277, 0, 0.992435, 0, 1, 0, -0.992435, 0, 0.12277, 29.0881, -1.60235, 4.97901)
+
+[node name="grass8" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.899474, 0, 0.436975, 0, 1, 0, -0.436975, 0, 0.899474, 25.2264, -1.60235, 13.5145)
+
+[node name="grass9" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.117191, 0, 0.993109, 0, 1, 0, -0.993109, 0, -0.117191, -14.6787, -1.60235, 22.7581)
+
+[node name="grass10" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.117191, 0, 0.993109, 0, 1, 0, -0.993109, 0, -0.117191, -9.64398, -1.60235, 22.7581)
+
+[node name="grass11" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.117191, 0, 0.993109, 0, 1, 0, -0.993109, 0, -0.117191, -22.1445, -1.60235, 22.7581)
+
+[node name="grass12" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.619587, 0, 0.784928, 0, 1, 0, -0.784928, 0, 0.619587, -22.1445, -1.60235, 19.0552)
+
+[node name="grass13" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.619587, 0, 0.784928, 0, 1, 0, -0.784928, 0, 0.619587, -26.7906, -1.60235, 19.0552)
+
+[node name="grass14" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.619587, 0, 0.784928, 0, 1, 0, -0.784928, 0, 0.619587, -26.7906, -1.60235, 11.765)
+
+[node name="grass15" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.619587, 0, 0.784928, 0, 1, 0, -0.784928, 0, 0.619587, -26.7906, -1.60235, 6.36428)
+
+[node name="grass16" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.918819, 0, -0.39468, 0, 1, 0, 0.39468, 0, 0.918819, -26.7906, -1.60235, -9.90712)
+
+[node name="grass18" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.918819, 0, -0.39468, 0, 1, 0, 0.39468, 0, 0.918819, -18.0695, -1.60235, -16.3689)
+
+[node name="grass19" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.0423289, 0, -0.999104, 0, 1, 0, 0.999104, 0, 0.0423289, -13.8008, -1.60235, -21.028)
+
+[node name="grass20" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.685933, 0, -0.727665, 0, 1, 0, 0.727665, 0, 0.685933, -5.44097, -1.60235, -22.2617)
+
+[node name="grass21" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.548162, 0, -0.836372, 0, 1, 0, 0.836372, 0, -0.548162, 0.622091, -1.60235, -23.5809)
+
+[node name="grass25" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.859335, 0, -0.511413, 0, 1, 0, 0.511413, 0, -0.859335, 14.3155, -1.57628, -23.8197)
+
+[node name="grass26" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.31497, 0, -0.949102, 0, 1, 0, 0.949102, 0, -0.31497, 19.3271, -1.60235, -17.1239)
+
+[node name="grass27" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.996332, 0, 0.0855736, 0, 1, 0, -0.0855736, 0, -0.996332, 23.3657, -1.60235, -12.4132)
+
+[node name="grass28" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.31497, 0, -0.949102, 0, 1, 0, 0.949102, 0, -0.31497, 19.3271, -2.64077, 22.7368)
+
+[node name="grass29" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.996332, 0, 0.0855736, 0, 1, 0, -0.0855736, 0, -0.996332, 23.3657, -2.64077, 27.4475)
+
+[node name="grass30" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.969932, 0, -0.243378, 0, 1, 0, 0.243378, 0, -0.969932, 8.75544, -2.64077, 22.1244)
+
+[node name="grass31" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.462306, 0, 0.886721, 0, 1, 0, -0.886721, 0, -0.462306, 6.94671, -2.64077, 28.0598)
+
+[node name="grass32" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.969932, 0, -0.243378, 0, 1, 0, 0.243378, 0, -0.969932, -5.37953, -2.64077, 22.1244)
+
+[node name="grass33" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.462306, 0, 0.886721, 0, 1, 0, -0.886721, 0, -0.462306, -7.18826, -2.64077, 28.0598)
+
+[node name="grass34" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.969932, 0, -0.243378, 0, 1, 0, 0.243378, 0, -0.969932, -6.50781, -2.6115, 29.6109)
+
+[node name="grass35" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.462306, 0, 0.886721, 0, 1, 0, -0.886721, 0, -0.462306, -8.31654, -2.6115, 35.5464)
+
+[node name="grass22" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.132983, 0, -0.991118, 0, 1, 0, 0.991118, 0, 0.132983, 8.13313, -1.60235, -19.7088)
+
+[node name="grass23" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.548162, 0, -0.836372, 0, 1, 0, 0.836372, 0, -0.548162, 0.622091, -3.5806, -40.4883)
+
+[node name="grass24" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.132983, 0, -0.991118, 0, 1, 0, 0.991118, 0, 0.132983, 8.13313, -3.5806, -36.6162)
+
+[node name="grass17" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(0.585495, 0, 0.810676, 0, 1, 0, -0.810676, 0, 0.585495, -26.7906, -1.60235, -5.24106)
+
+[node name="grass3" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.282676, 0, -0.959215, 0, 1, 0, 0.959215, 0, -0.282676, 1.61123, -1.60235, -5.1109)
+
+[node name="grass4" parent="." instance=ExtResource("1_csy7a")]
+transform = Transform3D(-0.848039, 0, 0.529934, 0, 1, 0, -0.529934, 0, -0.848039, -2.42184, -1.60235, -0.994065)

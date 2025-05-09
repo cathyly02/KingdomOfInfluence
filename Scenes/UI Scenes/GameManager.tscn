@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://qmymg12kt4hi"]
+
+[ext_resource type="Script" uid="uid://c5dk72dubplb7" path="res://Scripts/UI/Inventory.gd" id="1_m2tc1"]
+
+[node name="GameManager" type="Node"]
+script = ExtResource("1_m2tc1")
+
+[node name="UI" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.223529, 0.223529, 0.223529, 0.643137)
+
+[node name="QuestContainer" type="VBoxContainer" parent="UI"]
+layout_mode = 0
+offset_right = 135.0
+offset_bottom = 97.0
+scale = Vector2(5.51637, 6.63904)

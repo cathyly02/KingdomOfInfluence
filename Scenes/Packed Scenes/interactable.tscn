@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw45t3fds1d3u"]
+
+[ext_resource type="Script" uid="uid://8dnkln0bycv3" path="res://Scripts/UI/interactable.gd" id="1_rkv1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_we1ot"]
+size = Vector3(1, 0.272461, 1)
+
+[node name="Interactable" type="Area3D"]
+script = ExtResource("1_rkv1m")
+interactString = "E"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.99345, 0, 0, 0, 1.99345, 0, 0, 0, 1.99345, 0, 0, 0)
+shape = SubResource("BoxShape3D_we1ot")
+
+[node name="LabelPivot" type="Node3D" parent="."]
+visible = false
+
+[node name="Label3D" type="Label3D" parent="LabelPivot"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+text = "E"

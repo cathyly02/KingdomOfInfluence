@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bld4hj3nj7buj"]
+
+[ext_resource type="Texture2D" uid="uid://dgr2dblkjogwk" path="res://Assets/Sprites/fruits.png" id="1_0em2e"]
+[ext_resource type="Script" uid="uid://qnorxuhpv376" path="res://Scripts/Minigame/Suika/fruitscript5.gd" id="1_suct0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6yr1"]
+atlas = ExtResource("1_0em2e")
+region = Rect2(1646, 99.4999, 167, 176)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j64f1"]
+custom_solver_bias = 0.28
+radius = 70.0071
+
+[node name="RBF5" type="RigidBody2D"]
+script = ExtResource("1_suct0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_t6yr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j64f1")
