@@ -39,4 +39,4 @@ func endQuest() -> void:
 		call_deferred("go_to_kingdom")
 
 func go_to_kingdom():
-	get_tree().change_scene_to_file("res://Scenes/TheKingdom.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Worlds/TheKingdom.tscn")

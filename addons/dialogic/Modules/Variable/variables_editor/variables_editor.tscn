@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://6tdle4y5o03o"]
 
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Variable/variables_editor/variables_editor.gd" id="2"]
-[ext_resource type="Script" path="res://addons/dialogic/Modules/Variable/variables_editor/variable_tree.gd" id="2_1i17i"]
+[ext_resource type="Script" uid="uid://civmuov10cu07" path="res://addons/dialogic/Modules/Variable/variables_editor/variables_editor.gd" id="2"]
+[ext_resource type="Script" uid="uid://dcuosdnww18sn" path="res://addons/dialogic/Modules/Variable/variables_editor/variable_tree.gd" id="2_1i17i"]
 
 [sub_resource type="Image" id="Image_e1dkh"]
 data = {

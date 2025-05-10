@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://budpoagrxxpnv"]
+
+[ext_resource type="PackedScene" uid="uid://b7kgd5lql0c6h" path="res://Assets/Models/Nature Kit/tree_oak.glb" id="1_l7nr1"]
+[ext_resource type="PackedScene" uid="uid://c05s8tl5byf6o" path="res://Assets/Models/Nature Kit/tree_default.glb" id="2_ivdt6"]
+[ext_resource type="PackedScene" uid="uid://36i8sv75qmgh" path="res://Assets/Models/Nature Kit/tree_pineDefaultA.glb" id="3_ju2r2"]
+[ext_resource type="PackedScene" uid="uid://c3h7hfm20e7am" path="res://Assets/Models/Nature Kit/tree_thin.glb" id="4_a408s"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hgpy0"]
+height = 2.467
+radius = 0.08
+
+[node name="trees" type="Node3D"]
+
+[node name="tree_oak2" parent="." instance=ExtResource("1_l7nr1")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 9.009, 1, -1.402)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tree_oak2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tree_oak2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_hgpy0")
+
+[node name="tree_default9" parent="." instance=ExtResource("2_ivdt6")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 4.08338, 1, -8.85858)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tree_default9"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tree_default9/StaticBody3D"]
+shape = SubResource("CylinderShape3D_hgpy0")
+
+[node name="tree_pineDefaultA3" parent="." instance=ExtResource("3_ju2r2")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 8.60461, 1, -6.4935)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tree_pineDefaultA3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tree_pineDefaultA3/StaticBody3D"]
+shape = SubResource("CylinderShape3D_hgpy0")
+
+[node name="tree_thin2" parent="." instance=ExtResource("4_a408s")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 5.68734, 0.860816, -5.23382)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tree_thin2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tree_thin2/StaticBody3D"]
+shape = SubResource("CylinderShape3D_hgpy0")

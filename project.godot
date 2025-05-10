@@ -17,19 +17,18 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerData="*res://Scripts/playerData.gd"
+PlayerData="*res://Scripts/MainGame/Player/playerData.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-Global="*res://Global.gd"
-GameManager="*res://Scenes/GameManager.tscn"
+Global="*res://Scripts/MainGame/Global.gd"
+GameManager="*res://Scenes/UI Scenes/GameManager.tscn"
 
 [dialogic]
 
 directories/dch_directory={
-"CaravanOwner": "res://addons/dialogic/Timelines/CaravanOwner.dch",
-"Farmer": "res://addons/dialogic/Timelines/Farmer.dch",
-"KnightPerson": "res://addons/dialogic/Timelines/KnightPerson.dch",
-"VillageDrunk": "res://addons/dialogic/Timelines/VillageDrunk.dch",
-"dialog/VillageDrunk": "res://dialog/VillageDrunk.dch"
+"CaravanOwner": "res://addons/dialogic/Characters/CaravanOwner.dch",
+"Farmer": "res://addons/dialogic/Characters/Farmer.dch",
+"KnightPerson": "res://addons/dialogic/Characters/KnightPerson.dch",
+"dialog/VillageDrunk": "res://addons/dialogic/Characters/VillageDrunk.dch"
 }
 directories/dtl_directory={
 "CaravanOwner1": "res://addons/dialogic/Timelines/CaravanOwner1.dtl",
@@ -43,17 +42,13 @@ directories/dtl_directory={
 "VillageDrunkTimeline1": "res://addons/dialogic/Timelines/VillageDrunkTimeline1.dtl",
 "VillageDrunkTimeline2": "res://addons/dialogic/Timelines/VillageDrunkTimeline2.dtl",
 "VillageDrunkTimeline3": "res://addons/dialogic/Timelines/VillageDrunkTimeline3.dtl",
-"VillageDrunkTimeline4": "res://addons/dialogic/Timelines/VillageDrunkTimeline4.dtl",
-"dialog/VillageDrunkTimeline1": "res://dialog/VillageDrunkTimeline1.dtl",
-"dialog/VillageDrunkTimeline2": "res://dialog/VillageDrunkTimeline2.dtl",
-"dialog/VillageDrunkTimeline3": "res://dialog/VillageDrunkTimeline3.dtl",
-"dialog/VillageDrunkTimeline4": "res://dialog/VillageDrunkTimeline4.dtl"
+"VillageDrunkTimeline4": "res://addons/dialogic/Timelines/VillageDrunkTimeline4.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={}
-extensions_folder="res://addons/dialogic_additions"
+extensions_folder="res://addons/dialogic/Timelines"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

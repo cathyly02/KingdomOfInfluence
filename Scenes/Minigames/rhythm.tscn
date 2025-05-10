@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5c3y7bubmrhy"]
+
+[ext_resource type="PackedScene" uid="uid://iw2v1qh10g6d" path="res://Scenes/People/noScriptPlayer.tscn" id="1_gt65o"]
+[ext_resource type="Texture2D" uid="uid://5aimhtv0q3ju" path="res://Assets/UI/PNGs/blue.png" id="2_n64c0"]
+[ext_resource type="Script" uid="uid://bqh0iviil0bp0" path="res://Scripts/Minigame/Rhythm/noteButton.gd" id="3_rh6da"]
+[ext_resource type="Script" uid="uid://dr0luiuy414a6" path="res://Scripts/Minigame/Rhythm/leave.gd" id="4_cqdyf"]
+[ext_resource type="PackedScene" uid="uid://debmi7klmqaxj" path="res://Scenes/Packed Scenes/musicPlayer.tscn" id="4_rh6da"]
+[ext_resource type="PackedScene" uid="uid://bdvkdv77fslji" path="res://addons/midi/ADSR.tscn" id="5_q274c"]
+[ext_resource type="PackedScene" uid="uid://cuyd1qv0pn26e" path="res://addons/midi/MidiPlayer.tscn" id="6_5d0eo"]
+[ext_resource type="Script" uid="uid://uje4goybx15s" path="res://Scripts/Minigame/Rhythm/score.gd" id="7_5d0eo"]
+[ext_resource type="Script" uid="uid://chbm7waq5blug" path="res://Scripts/MainGame/Player/checkGuitar.gd" id="8_g4lrn"]
+
+[node name="rhythm" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 10)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.87171, 9.90244)
+
+[node name="up" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 4, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="up"]
+transform = Transform3D(-1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0, 0.25, 0, 0, 0)
+texture = ExtResource("2_n64c0")
+script = ExtResource("3_rh6da")
+input = "upArrow"
+
+[node name="left" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="left"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+texture = ExtResource("2_n64c0")
+script = ExtResource("3_rh6da")
+input = "leftArrow"
+
+[node name="down" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -8, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="down"]
+transform = Transform3D(-1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0, 0.25, 0, 0, 0)
+texture = ExtResource("2_n64c0")
+script = ExtResource("3_rh6da")
+input = "downArrow"
+
+[node name="right" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, -4, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="right"]
+transform = Transform3D(-0.25, 2.18557e-08, 0, -2.18557e-08, -0.25, 0, 0, 0, 0.25, 0, 0, 0)
+texture = ExtResource("2_n64c0")
+script = ExtResource("3_rh6da")
+input = "rightArrow"
+
+[node name="notePlayer" parent="." instance=ExtResource("4_rh6da")]
+
+[node name="Music Player" type="Node3D" parent="."]
+script = ExtResource("4_cqdyf")
+
+[node name="ADSR" parent="Music Player" instance=ExtResource("5_q274c")]
+
+[node name="MidiPlayer" parent="Music Player" instance=ExtResource("6_5d0eo")]
+file = "res://assests/sound/song.mid"
+playing = true
+soundfont = "res://assests/sound/SpanishClassicalGuitar-20190618.sf2"
+
+[node name="RandomStuff" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, -3, 1)
+
+[node name="NoScriptPlayer" parent="RandomStuff" instance=ExtResource("1_gt65o")]
+transform = Transform3D(0.819152, 0, 0.573577, 0, 1, 0, -0.573577, 0, 0.819152, 0.9, 0, 1)
+script = ExtResource("8_g4lrn")
+
+[node name="Label3D" type="Label3D" parent="RandomStuff"]
+offset = Vector2(0, -150)
+text = "Score:
+"
+font_size = 150
+
+[node name="Label3D2" type="Label3D" parent="RandomStuff"]
+offset = Vector2(0, -300)
+font_size = 150
+script = ExtResource("7_5d0eo")

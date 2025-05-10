@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c4pkvt72nufas"]
-
-[ext_resource type="PackedScene" uid="uid://d08505dfobnlx" path="res://assests/GuitarA.glb" id="1_gx2ay"]
-
-[node name="GuitarA" instance=ExtResource("1_gx2ay")]
-
-[node name="Guitar1" parent="." index="0"]
-transform = Transform3D(0.147668, 1.14328, -0.723523, -1.25511, 0.872625, 0.402585, 1.09163, 0.848655, 0.560749, 0.271875, 2.01049, 0.431372)
