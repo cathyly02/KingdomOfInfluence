@@ -10,7 +10,9 @@ func _ready() -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Inventory"):
+	if event.is_action_pressed("Inventory")\
+	&& get_tree().current_scene.name != "Menu"\
+	&& get_tree().current_scene.name != "ChangeSkin":
 		inventory_open = !inventory_open
 		ui.visible = inventory_open
 		await pauseGame()
@@ -22,4 +24,5 @@ func pauseGame() -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		await get_tree().process_frame
+		await get_tree().create_timer(0.01).timeout
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

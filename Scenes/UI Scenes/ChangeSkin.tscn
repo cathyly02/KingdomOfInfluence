@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://b7h8kdk1r7tp6" path="res://Scripts/UI/UICustomizeScene/ChangeSkin.gd" id="2_abk0b"]
 [ext_resource type="Script" uid="uid://kfg4d78ewmth" path="res://Scripts/UI/UICustomizeScene/NextButton/ToPersonalityUI.gd" id="3_2ms1e"]
 [ext_resource type="Script" uid="uid://bbj2xqkl6cra3" path="res://Scripts/UI/UICustomizeScene/NextButton/ToKingdomScene.gd" id="4_abk0b"]
-[ext_resource type="Script" path="res://Scenes/backCharCustom.gd" id="7_01lhc"]
+[ext_resource type="Script" uid="uid://cn0g7uoh6ge43" path="res://Scripts/UI/UICustomizeScene/backCharCustom.gd" id="4_vgpqi"]
 [ext_resource type="Script" uid="uid://v40kjlqp5w46" path="res://Scripts/UI/SliderScripts/firstslider.gd" id="9_c6ofp"]
 [ext_resource type="Script" uid="uid://dysqcdidixwm6" path="res://Scripts/UI/SliderScripts/secondslider.gd" id="10_if7nu"]
 [ext_resource type="Script" uid="uid://de75la4cpcgak" path="res://Scripts/UI/SliderScripts/thirdslider.gd" id="11_2ecpr"]
@@ -132,7 +132,7 @@ custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 action_mode = 0
 text = "Back"
-script = ExtResource("7_01lhc")
+script = ExtResource("4_vgpqi")
 
 [node name="Label" type="Label" parent="Node3D/CanvasLayer/UI/PersonalityCustomization/MarginContainer/VBoxContainer"]
 layout_mode = 2
