@@ -18,6 +18,7 @@ var mouse_captured := true
 # gravity woahhh
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var action = false
+var playerCanMove = true
 
 #skin mesh testures
 @export var skins: Array[Texture2D]
@@ -66,6 +67,8 @@ func _process(delta):
 
 	
 func _physics_process(delta):
+	if (!playerCanMove):
+		return
 	var sound = get_node("/root/world/Guitar/AudioStreamPlayer")
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction

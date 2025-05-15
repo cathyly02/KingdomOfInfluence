@@ -30,11 +30,10 @@ func _on_body_exited(body):
 		print(body.name, " is not in front of npc")
 	
 func _process(delta: float) -> void:
-
-
 	if inside:
 		if Input.is_action_just_pressed("interact"):
-			print("interacted")
+			# disable player movement here
+			player.playerCanMove = false
 			get_node("/root/Global").current_npc = self
 			determineNPCDialog(Global.current_npc)
 			'''#teleport_player_relative_to_object(Vector3(0, 0, -2))
@@ -63,6 +62,7 @@ func _process(delta: float) -> void:
 		rotationOverride = false	
 			'''
 func determineNPCDialog(npc):
+	Dialogic.timeline_ended.connect(ended_dialog)
 	match npc.name:
 		"DrunkardNPC":
 			randomDialog()
@@ -91,10 +91,9 @@ func teleport_player_relative_to_object(offset: Vector3):
 
 #dialog functions for village drunk
 func randomDialog():
-	Dialogic.timeline_ended.connect(ended_dialog)
 	var dialog_line = randi_range(1,4)
 	Dialogic.start("VillageDrunkTimeline"+str(dialog_line))
 	
 func ended_dialog():
+	player.playerCanMove = true;
 	Dialogic.timeline_ended.disconnect(ended_dialog)
-	
