@@ -12,11 +12,11 @@
 [ext_resource type="PackedScene" uid="uid://cxvjeapfatiax" path="res://Assets/Models/Nature Kit/log_stack.glb" id="10_7yui6"]
 [ext_resource type="PackedScene" uid="uid://dfrpvmttprmjq" path="res://Scenes/Packed Scenes/corn_plot.tscn" id="10_c5t2i"]
 [ext_resource type="PackedScene" uid="uid://8fpuflq6tjdh" path="res://Assets/Models/Nature Kit/campfire_logs.glb" id="10_ikia7"]
-[ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scripts/MainGame/NPC/npc.gd" id="11_o2rbt"]
-[ext_resource type="Script" uid="uid://cbktu5ak0u57n" path="res://Scripts/MainGame/Player/guitar.gd" id="13_c5t2i"]
+[ext_resource type="Script" uid="uid://dbjue43qcl26w" path="res://Scripts/MainGame/npc/npc.gd" id="11_o2rbt"]
+[ext_resource type="Script" uid="uid://cbktu5ak0u57n" path="res://Scripts/MainGame/player/guitar.gd" id="13_c5t2i"]
 [ext_resource type="Script" uid="uid://duws8d8qy22nr" path="res://Scripts/Environment/pick.gd" id="14_hgpy0"]
 [ext_resource type="AudioStream" uid="uid://dus6hfcbnxpht" path="res://Assets/Sound/chords/AmDown.mp3" id="14_pyn1s"]
-[ext_resource type="Script" uid="uid://cp1bluqjjl8pe" path="res://Scripts/MainGame/NPC/npc_wander.gd" id="15_04jkj"]
+[ext_resource type="Script" uid="uid://cp1bluqjjl8pe" path="res://Scripts/MainGame/npc/npc_wander.gd" id="15_04jkj"]
 [ext_resource type="AudioStream" uid="uid://iw57otolqehs" path="res://Assets/Sound/lofi.mp3" id="15_7yui6"]
 [ext_resource type="PackedScene" uid="uid://c8qe846sih8f" path="res://Assets/Models/Nature Kit/flower_redC.glb" id="15_hgpy0"]
 [ext_resource type="AudioStream" uid="uid://banv8i863fw0k" path="res://Assets/Sound/chords/AmUp.mp3" id="15_no8kt"]
@@ -3398,7 +3398,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_4yx1m")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5okb3"]
-load_path = "res://.godot/imported/colormap.png-724769381fef34d9d1d9ecf0b5a2fddd.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1cojt"]
 albedo_texture = SubResource("CompressedTexture2D_5okb3")
