@@ -30,6 +30,8 @@ func startQuest() -> void:
 		# make npc walk
 		var movement_body = get_parent().get_parent()
 		var cyl = movement_body.get_child(5)
+		cyl.quest_ongoing = true
+		cyl.set_to_green()
 		var num = 0
 		for each_location in walk_locations:
 			var corrected_location = Vector3(each_location.x, ground_height, each_location.z)
@@ -54,6 +56,8 @@ func startQuest() -> void:
 			  "Points Away: " + str(away_guard_points) + "\n" +
 			  "Score: " + str(total_score))
 		quest_began = false
+		cyl.quest_ongoing = false
+		cyl.set_invisible()
 		movement_body.rotate_to_angle(45)
 
 #func updateQuest() -> void:

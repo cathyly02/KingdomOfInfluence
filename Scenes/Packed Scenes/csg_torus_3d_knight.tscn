@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bivfhx2hw1yj5"]
+
+[node name="CSGTorus3D" type="CSGTorus3D"]
+inner_radius = 5.8
+outer_radius = 6.0
+sides = 30
