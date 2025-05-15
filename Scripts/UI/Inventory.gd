@@ -24,4 +24,5 @@ func pauseGame() -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		await get_tree().process_frame
+		await get_tree().create_timer(0.01).timeout
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
