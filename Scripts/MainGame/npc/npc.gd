@@ -15,16 +15,14 @@ func _ready():
 		print("no player")
 
 var inside = false
-var bodyName
 func _on_body_entered(body):
-	bodyName = body.name
-	if (bodyName == "Player"):
+	if (body.name == "Player"):
 		Dialogic.paused = false
 		inside = true
 		print(body.name, " is in front of ", self.name)
 
 func _on_body_exited(body):
-	if (bodyName == "Player"):
+	if (body.name == "Player"):
 		Dialogic.paused = true
 		Dialogic.clear()
 		get_node("/root/Global").current_npc = null
